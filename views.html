@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="oodlesApp">
+
+<head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-route.min.js"></script>
+  <script src="views.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+<div id="wrap">
+  <div class="navbar navbar-inverse" role="navigation"><div class="container"><div class="navbar-header">
+ 
+          <a class="navbar-brand" href="http://www.oodlestechnologies.com/blogs/How-to-change-view-with-AngularJs-Routing-and-Views">oodles</a></div>
+          <div class="navbar-collapse">
+          <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li> 
+          <li><a href="#about">About</a></li> 
+          <li><a href="#service">Service</a></li>
+            
+          </ul></div><!--//--></div></div>
+
+  <!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+ </div>
+  <div id="footer"><div class="container"><p class="text-muted">View the tutorial on <a href="http://www.oodlestechnologies.com/blogs/How-to-change-view-with-AngularJs-Routing-and-Views">Oodles Technologies</a></p></div></div>
+ 
+ 
+</body>
+
+</html>

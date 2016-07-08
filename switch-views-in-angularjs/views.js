@@ -1,4 +1,4 @@
-// create the module and name it
+// module creation
 	var nistantriApp = angular.module('nistantriApp', ['ngRoute']);
 
 	// routes

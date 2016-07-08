@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="nistantriApp">
+
+<head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-route.min.js"></script>
+  <script src="views.js"></script>
+</head>
+
+<!-- Call angular controller -->
+<body ng-controller="mainController">
+<div id="wrap">
+  <div class="navbar navbar-inverse" role="navigation"><div class="container"><div class="navbar-header">
+ 
+          <a class="navbar-brand" href="#">Nistantri</a></div>
+          <div class="navbar-collapse">
+          <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li> 
+          <li><a href="#about">About</a></li> 
+          <li><a href="#service">Service</a></li>
+            
+          </ul></div><!--//--></div></div>
+
+  <!-- Below content will injected -->
+    <div ng-view></div>
+    
+ </div>
+  
+ 
+ 
+</body>
+
+</html>

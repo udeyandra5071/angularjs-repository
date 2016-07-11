@@ -10,7 +10,7 @@
 .hide{display:none;}
 
 </style>
-<body ng-app="myApp">
+<body ng-app="myApp" ng-controller="myappcon">
 
 <w3-test-directive ></w3-test-directive>
     <input type="text" id="datepicker">
@@ -22,9 +22,13 @@ $("w3-test-directive").toggleClass("hide");
 $( "#datepicker" ).datepicker();
                   }
 var app = angular.module("myApp", []);
+app.controller("myappcon",function($scope){
+    $scope.username = "Udeyandra";
+    
+});
 app.directive("w3TestDirective", function() {
     return {
-        template : "<h1>Made by a directive!</h1>",
+        template : "<h1>{{username}}</h1>",
         link:clicker
     };
 });

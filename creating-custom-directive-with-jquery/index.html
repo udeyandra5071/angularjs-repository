@@ -18,9 +18,9 @@
 <script>
 function clicker(){ $("button").bind("click",function(){
 $("w3-test-directive").toggleClass("hide");
+});
 $( "#datepicker" ).datepicker();
-    
-});}
+                  }
 var app = angular.module("myApp", []);
 app.directive("w3TestDirective", function() {
     return {

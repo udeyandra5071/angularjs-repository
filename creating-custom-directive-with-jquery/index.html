@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<style>
+.hide{display:none;}
+
+</style>
+<body ng-app="myApp">
+
+<w3-test-directive></w3-test-directive>
+<button>Add</button>
+<script>
+function clicker(){ $("button").bind("click",function(){
+$("w3-test-directive").toggleClass("hide");
+});}
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+    return {
+        template : "<h1>Made by a directive!</h1>",
+ link:clicker
+    };
+});
+</script>
+
+</body>
+</html>

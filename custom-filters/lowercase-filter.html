@@ -6,10 +6,12 @@
 <div ng-app="myApp" ng-controller="personCtrl">
 
 <p>The name is {{ lastName | uppercase }}</p>
+    <input type="text" ng-model="test" />
 <ul>
-  <li ng-repeat="x in names | orderBy:'district'">
-    {{ x.name + ', ' + x.district }}
+  <li ng-repeat="x in names |  filter:test">
+    {{ x.name + ', ' + x.district + ', ' +x.price }}
   </li>
+    
 </ul>
 </div>
 
@@ -19,7 +21,7 @@ angular.module('myApp', []).controller('personCtrl', function($scope) {
     $scope.lastName = "Doe";
       $scope.names = [
         {name:'Jani',country:'Norway',district:'Do not know'},
-        {name:'Carl',country:'Sweden'},
+        {name:'Carl',country:'Sweden',price:'50'},
         {name:'Margareth',country:'England'},
         {name:'Hege',country:'Norway'},
         {name:'Joe',country:'Denmark'},

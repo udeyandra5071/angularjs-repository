@@ -17,16 +17,14 @@
 //angular.js example for factory vs service
 var app = angular.module("app",[]);
 
-app.service("game", function () {
+app.factory("game", function () {
   return {
-    title: "StarCraft",
-     name: "Udeyandra"
+    title: "StarCraft"
   };
 });
 
 app.controller("AppCtrl", function ($scope, game) {
   $scope.title = game.title;
-  $scope.name = game.name;
 });
 
     </script>
@@ -36,7 +34,7 @@ app.controller("AppCtrl", function ($scope, game) {
 <body>
 <div ng-app="app"  ng-controller="AppCtrl">
     <p>{{title}}</p>
-    <p>{{name}}</p>
+    
  
 </div>
 <br />

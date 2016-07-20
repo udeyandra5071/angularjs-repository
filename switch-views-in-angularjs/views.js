@@ -1,8 +1,4 @@
-function highchartser(){
-    $(function () {
 
-});
-}
 // module creation
 	var nistantriApp = angular.module('nistantriApp', ['ngRoute']);
 

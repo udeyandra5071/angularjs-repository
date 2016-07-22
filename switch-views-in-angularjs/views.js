@@ -102,7 +102,7 @@
 	nistantriApp.controller('aboutController', function($scope) {
 		$scope.info = 'About Nistantri';
               $scope.videos = [
-        {videolink:'videos/myvideo.mp4'}
+        {videolink:'partials/videos/myvideo.mp4'}
         ];  
 	});
 

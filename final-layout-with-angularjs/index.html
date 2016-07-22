@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="nistantriApp">
+<head>
+<title>My name</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JS -->
+<script src="js/jquery-3.1.0.js"></script>
+ <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-route.min.js"></script>
+  <script src="js/highcharts.js"></script>
+<script src="js/exporting.js"></script>
+<script src="js/nistantriApp.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.cs" />
+</head>
+<body ng-controller="homecontroller">
+<div class="row">
+<div class="container-fluid">
+<nav class="navbar navbar-default navbar-fixed-top padding-left-right">
+  <div class="container-fluid">
+    <div class="navbar-header" ng-repeat="logos in header">
+      <a class="navbar-brand" href="#">
+        <img src="{{logos.logo}}" />
+      </a>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-repeat="heads in header"><a class="addactive" href="#">{{heads.nav}}</a></li>
+     
+      </ul>
+  </div>
+</nav>    
+</div> 
+<div class="container-fluid margin-top-header" ng-view></div>
+</div>    
+
+</body>
+</html>

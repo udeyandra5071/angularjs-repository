@@ -14,6 +14,6 @@
 app.controller("mycontroller",function($scope,$timeout){
     $scope.list = ["images/1.jpg","images/2.jpg"];
     $scope.lists = ["One","Two"];
-   $timeout(swipeme, 1000);
+   $timeout(swipeme, 50);
 });
  

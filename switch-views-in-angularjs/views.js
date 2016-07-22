@@ -22,6 +22,10 @@
 			.when('/service', {
 				templateUrl : 'partials/services.html',
 				controller  : 'serviceController'
+			})
+            .when('/textarea', {
+				templateUrl : 'partials/textarea.html',
+				controller  : 'myappcon'
 			});
 	
 	});
@@ -77,13 +81,33 @@
             data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
         }]
     });
-       
+        
+        //datepicker
+      $( "#datepicker" ).datepicker();
+        //names
+          $scope.names = [
+        {name:'Jani',country:'Norway'},
+        {name:'Carl',country:'Sweden'},
+        {name:'Margareth',country:'England'},
+        {name:'Hege',country:'Norway'},
+        {name:'Joe',country:'Denmark'},
+        {name:'Gustav',country:'Sweden'},
+        {name:'Birgit',country:'Denmark'},
+        {name:'Mary',country:'England'},
+        {name:'Kai',country:'Norway'}
+        ];           
+  
 	});
 
 	nistantriApp.controller('aboutController', function($scope) {
 		$scope.info = 'About Nistantri';
+              $scope.videos = [
+        {videolink:'videos/myvideo.mp4'}
+        ];  
 	});
 
 	nistantriApp.controller('serviceController', function($scope) {
 		$scope.info = 'Building E-learning Authoring tool';
 	});
+
+

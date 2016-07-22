@@ -10,6 +10,15 @@
 </p>
 <p><a class="btn  btn-success" href="#" role="button">View details »</a>
   
-</p></div></div>
+</p></div>
+ <div class="col-md-8">
+ video loading using angular from json
+<video ng-repeat="video in videos" controls>
+  <source ng-src="{{video.videolink}}" type="video/mp4">
+    </source>
+  Your browser does not support the video tag.
+</video>
+    </div>     
+</div>
   
 </div>

@@ -15,7 +15,9 @@
   <script src="js/highcharts.js"></script>
 <script src="js/exporting.js"></script>
 <script src="js/nistantriApp.js"></script>
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.cs" />
+<link rel="stylesheet" type="text/css" href="css/animate.css" />
 </head>
 <body ng-controller="homecontroller">
 <div class="row">
@@ -29,13 +31,15 @@
     </div>
       <ul class="nav navbar-nav navbar-right">
         <li ng-repeat="heads in header"><a class="addactive" href="#">{{heads.nav}}</a></li>
-     
+  
       </ul>
   </div>
 </nav>    
 </div> 
 <div class="container-fluid margin-top-header" ng-view></div>
-</div>    
 
+</div>    
+<script src="js/swiper.min.js">
+    </script>
 </body>
 </html>

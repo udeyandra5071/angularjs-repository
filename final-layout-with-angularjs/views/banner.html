@@ -1,3 +1,32 @@
-<div class="col-md-12">
-{{info}}
+<div class="col-md-12" >
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide"  ng-repeat="banners in bannerdata">
+<figure>
+  <img width="100%" ng-src="{{banners.banner}}" />  
+<figcaption class="caption animated fadeInRight">
+    <h3>{{banners.figcaptitle}}</h3>
+    <h4>{{banners.figsubtitle}}</h4>
+    </figcaption>
+</figure>
+    
+
+</div>
+
+</div>
+ 
+<div class="swiper-pagination"></div>
+ <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+</div>
+<div class="qouteinfo">
+   <div class="col-md-10 " ng-repeat="ngqoute in header">
+{{ngqoute.qouteInfo}} 
+</div> 
+<div class="col-md-2">
+<button type="button" class="btn btn-danger">Action</button>    
+</div>   
+</div>
+
 </div>

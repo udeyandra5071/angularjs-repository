@@ -33,14 +33,24 @@ swiper.on('slideChangeEnd', function () {
 
     }
 nistantriApp.controller("homecontroller",function($scope,$http,$timeout){
-    $scope.info="Udeyandra";
+    $timeout(swipeme, 6);
+    $scope.quotetext="We help you to create the best business plan , resource & execution";
       $http({method: 'POST', url: 'json/header.json'}).success(function(data) {
 $scope.header = data;
     console.log(data);
+
 });   
 $http({method: 'POST', url: 'json/banner.json'}).success(function(data) {
 $scope.bannerdata = data;
     console.log(data);
+
+
 });
-$timeout(swipeme, 6);
+$http({method: 'POST', url: 'json/middlecontainer.json'}).success(function(data) {
+$scope.middlecontainer = data;
+    console.log(data);
+
+
+});
+
 });

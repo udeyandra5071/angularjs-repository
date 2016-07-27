@@ -75,3 +75,5 @@ html,body{position:relative;height:100%;}body{background: #fff;font-family:Helve
 .padding-top-30{    padding-top: 30px;}
 .grid-bg{background: #314861;}
 .margin-top15{margin-top: 15px;}
+.img-responsive{    float: none;
+    margin: 0px auto;}

@@ -5,7 +5,17 @@ nistantriApp.config(function($routeProvider){
                        }).when("/carrysearch",{templateUrl:"views/carrysearch.html",
                                                controller: "carrysearchlist"
         
-                       });
+                       }).when("/getcaricatcher",{templateUrl:"views/cariget.html",
+                                                  controller:"getcaricatcher"
+                        }).when("/illustration",{templateUrl:"views/illustrations.html",
+                                                  controller:"illustrations"
+                        }).when("/getillustration",{templateUrl:"views/getillustrations.html",
+                                                    controller:"getillustrations"
+                        }).when("/photostock",{templateUrl:"views/photostock.html",
+                                               controller:"photostock"
+                        }).when("/hirephotographer",{templateUrl:"views/getphotographer.html",
+                                                    controller:"hirephotographer"
+                        })
     
 });
 
@@ -61,6 +71,14 @@ $scope.middlecontainer = data;
 nistantriApp.controller("carrysearchlist",function($scope,$http,$timeout){
 $http({method: 'POST', url: 'json/caricatcher.json'}).success(function(data) {
 $scope.caricatcher = data;
+    console.log(data);
+
+
+});	
+});
+nistantriApp.controller("illustrations",function($scope,$http){
+$http({method: 'POST', url: 'json/illustrations.json'}).success(function(data) {
+$scope.illustration = data;
     console.log(data);
 
 

@@ -1,0 +1,19 @@
+<div class="col-md-12" >
+<div class="container">
+   <div class="col-md-12">
+    <h2 class="center">Caricatcher</h2>
+    <input type="text" ng-model="carifilter" class="form-control" placeholder="Calender" aria-describedby="basic-addon2">
+</div>
+<div class="col-md-12 padding-top-30">
+<div class="col-md-3 margin-top15" ng-repeat="caricat in caricatcher |  filter:carifilter">
+<div class="col-md-12  padding-top-bottom box-shadow">
+<div class="col-md-12"><img class="img-responsive" ng-src="{{caricat.thumbnail}}" /></div>
+<div class="col-md-12"><h4 class="center">{{caricat.carititle}}</h4></div>
+<div class="col-md-12 center">{{caricat.cariDescription}}</div>
+<div class="col-md-12 author right">Author: {{caricat.author}}</div>
+    </div>
+</div> 
+
+</div> 
+</div>
+</div>

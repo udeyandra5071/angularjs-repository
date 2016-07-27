@@ -30,8 +30,9 @@
         <img src="{{logos.logo}}" />
       </a>
     </div>
+      
       <ul class="nav navbar-nav navbar-right">
-        <li ng-repeat="heads in header"><a class="addactive" href="#">{{heads.nav}}</a></li>
+        <li ng-repeat="heads in header"><a class="addactive" href="#{{heads.redirecto}}">{{heads.nav}}</a></li>
   
       </ul>
   </div>

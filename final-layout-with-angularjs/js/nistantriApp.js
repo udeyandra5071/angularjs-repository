@@ -1,7 +1,11 @@
 var nistantriApp = angular.module("nistantriApp", ['ngRoute']);
 nistantriApp.config(function($routeProvider){
     $routeProvider.when("/",{templateUrl: "views/banner.html",
-                            controller: "homecontroller"});
+                            controller: "homecontroller"
+                       }).when("/carrysearch",{templateUrl:"views/carrysearch.html",
+                                               controller: "carrysearchlist"
+        
+                       });
     
 });
 
@@ -54,3 +58,12 @@ $scope.middlecontainer = data;
 });
 
 });
+nistantriApp.controller("carrysearchlist",function($scope,$http,$timeout){
+$http({method: 'POST', url: 'json/caricatcher.json'}).success(function(data) {
+$scope.caricatcher = data;
+    console.log(data);
+
+
+});	
+});
+ 

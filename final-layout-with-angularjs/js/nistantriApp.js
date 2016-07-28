@@ -26,9 +26,7 @@ function addactive(){
     });
     
 }
-function addtocart(){
-     $("p").clone().appendTo("body");
-}
+
  function swipeme(){
         var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
@@ -94,4 +92,7 @@ $scope.photostock = data;
 
 });	
 });
+
+// Cart feature
+
  

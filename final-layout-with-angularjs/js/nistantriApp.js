@@ -26,7 +26,9 @@ function addactive(){
     });
     
 }
-
+function addtocart(){
+     $("p").clone().appendTo("body");
+}
  function swipeme(){
         var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
@@ -48,7 +50,7 @@ swiper.on('slideChangeEnd', function () {
     }
 nistantriApp.controller("homecontroller",function($scope,$http,$timeout){
     $timeout(swipeme, 6);
-    $scope.quotetext="We help you to create the best business plan , resource & execution";
+    $scope.quotetext="Do you want artist, Hire here";
       $http({method: 'POST', url: 'json/header.json'}).success(function(data) {
 $scope.header = data;
     console.log(data);
@@ -79,6 +81,14 @@ $scope.caricatcher = data;
 nistantriApp.controller("illustrations",function($scope,$http){
 $http({method: 'POST', url: 'json/illustrations.json'}).success(function(data) {
 $scope.illustration = data;
+    console.log(data);
+
+
+});	
+});
+nistantriApp.controller("photostock",function($scope,$http){
+$http({method: 'POST', url: 'json/photostock.json'}).success(function(data) {
+$scope.photostock = data;
     console.log(data);
 
 

@@ -93,6 +93,6 @@ $scope.photostock = data;
 });	
 });
 
-// Cart feature
+// Cart feature : http://www.tutorialspoint.com/angularjs/angularjs_cart_application.htm
 
  

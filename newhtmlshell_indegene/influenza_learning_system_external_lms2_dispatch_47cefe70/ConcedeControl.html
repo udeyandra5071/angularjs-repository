@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>SCORM Dispatch</title>
+        <script type="text/javascript">
+            //This is the final unloading logic for the local
+            //dispatch package, where we make sure to process any
+            //lingering message, and finally call ConcedeControl.
+            //This code has to be on the client.
+            var dispatch_home = window.parent.parent;
+            dispatch_home.dispatch_content_frame.pipeFrame.checkForMessages();
+            dispatch_home.ConcedeControl();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+/***f7***/
+.image_box1{float:left;position:absolute;left: 24%; top: 10%;}
+#image_flash {
+    width: 30px;
+    height: 30px;
+    background: red;
+	border-radius: 20px;position:absolute;top:219px;left:186px;
+-webkit-animation: grow 5s infinite; /* Chrome, Safari, Opera */
+    animation: grow 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes grow {
+    from {width:0px;height:0px;}
+    to {width:30px;height:30px;}
+
+}
+
+@keyframes grow {
+     from {width:0px;height:0px;}
+    to {width:30px;height:30px;}
+}
+#hot_spot1{position:absolute;top: 32%;left: 49%;width:30px;height:30px;cursor:pointer;}
+#hot_spot2{position:absolute;top: 47%;left: 52%;width:30px;height:30px;cursor:pointer;}
+#hot_spot3{position:absolute;top: 59%;left:37%;width:30px;height:30px;cursor:pointer;}
+#hot_spot4{position:absolute;top: 70%;left: 56%;width:30px;height:30px;cursor:pointer;}
+.click_fn{}
+#hot_spot_cont1{width:441px;height:193px;border-radius:5px;display:none;top: -2%;left: 33%;position:absolute;background:url(../images/f7/bg_popup.png) no-repeat;
+}
+#hot_spot_cont1 span{}
+#hot_spot_cont1 p{padding:5px 20px 5px 20px;}
+#hot_spot_cont2{width:441px;height:193px;border-radius:5px;display:none;top: 13%;
+    left: 35.6%;position:absolute;background:url(../images/f7/bg_popup.png) no-repeat;}
+#hot_spot_cont2 span{}
+#hot_spot_cont2 p{padding:5px 20px 5px 20px;}
+#hot_spot_cont3{width:441px;height:193px;border-radius:5px;display:none;top: 25%;left: 20.7%;position:absolute;background:url(../images/f7/bg_popup.png) no-repeat;}
+#hot_spot_cont3 span{}
+#hot_spot_cont3 p{padding:5px 20px 5px 20px;}
+#hot_spot_cont4{width:441px;height:193px;border-radius:5px;display:none;top: 36%;
+    left: 39.6%;position:absolute;background:url(../images/f7/bg_popup.png) no-repeat;}
+#hot_spot_cont4 span{}
+#hot_spot_cont4 p{padding:5px 20px 5px 20px;}
+.bg_f7{background-color:#000;opacity:0.9;width:990px;height:514px;}
+.left_img_f7{    width: 149px;
+    height: 176px;
+    float: left;
+    display: inline-block;
+    /*top: -8px;*/
+    position: absolute;}
+.left_img_f7 img{top:0px;height:176px;position:initial !important;}
+.right_txt_f7{ width: 268px;
+    float: right;
+    padding: 23px 14px 10px 5px;
+    line-height: 120%;}
+	.close_f7{position: relative;
+    top: 0%;
+    left: 52%;
+    float: right;
+    /* margin-right: 10px; */
+    display: inline-block;cursor:pointer;}
+	#slider-one_page2 {
+    background: transparent;
+    height: 529px;
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    float: none;
+    margin: 0px auto;
+    right: 12px;
+    top: 1.29rem;
+}

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>Drag and drop quiz</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/style_dragndrop.css">
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <style type="text/css">
+    #cardSlots div, #cardPile div {
+    float: left;
+    width: 200px;
+    height: 46px;
+    /* padding: 22px 10px 118px 10px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid #333;
+    margin: 9px 0 0 0px;
+    position: relative;
+    overflow: hidden;
+}
+        #cardPile{left: 20px;}
+#cardSlots, #cardPile {
+    width: 240px;
+    height: 790px;
+    padding-top: 0px;
+    padding: 20px;
+   float: right;
+    position: relative;
+ 
+   
+}
+        
+#content {
+    height: 800px;
+    width: 1024px;
+    margin: 0px auto;
+}
+        .position-icon{background-position:right center !important;}
+.submit {
+    position: absolute;
+    right: 535px;
+    top: 400px;
+    padding: 10px;
+    width: 150px;
+    background: #fdb515;
+    /* border-radius: 5px; */
+    color: #fff;
+    font-size: 16px;
+    display: none;
+}
+        .reset {
+       position: absolute;
+    right: 29px;
+    /* top: 850px; */
+    padding: 10px;
+    width: 150px;
+    background: #fdb515;
+    /* border-radius: 5px; */
+    color: #fff;
+    font-size: 16px;
+    bottom: -109px;
+ 
+}
+        .wrongActive{display: block;
+
+    background:url(images/wrong.png);
+    background-position: 265px center;
+    background-repeat: no-repeat;
+    }
+        .correctActive{display: block;
+
+    background:url(images/correct.png);
+    background-position: 265px center;
+    background-repeat: no-repeat;
+    
+    }
+        #cardSlots{    bottom: 51px;    left: 55px;}
+        .visibility{visibility: hidden;}
+    </style>
+<script type="text/javascript">
+
+var correctCards = 0;
+$( init );
+
+function init() {
+
+  // Hide the success message
+  $('#successMessage').hide();
+     $('.submit').hide();
+  $('#successMessage').css( {
+    left: '580px',
+    bottom: '0px',
+    width: 0,
+    height: 0
+  } );
+
+  // Reset the game
+  correctCards = 0;
+  $('#cardPile').html( '' );
+  $('#cardSlots').html( '' );
+
+  // Create the pile of shuffled cards
+  var numbers = [ '1', '2', '3', '4' ]; 
+   var dragvalues = [ 'Biro Brothers', 'Pneumatic rubber tire', 'Marie Curie', 'Thermometer' ]; 
+  //numbers.sort( function() { return Math.random() - .5 } );
+      
+  for ( var i=0; i<4; i++ ) {
+    $('<div>' + numbers[i] + '<div class="position-absolute">' + dragvalues[i] +'</div></div>').data( 'number', numbers[i] ).attr( 'id', 'card'+numbers[i] ).appendTo( '#cardPile' ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+   
+  }
+
+  // Create the card slots
+  var words = [ 'Biro Brothers', 'Pneumatic rubber tire', 'Marie Curie', 'Thermometer' ];
+    
+  for ( var i=1; i<=4; i++ ) {
+    $('<div><div class="visibility">'+ words[i-1] + '</div></div>').data( 'number', i ).appendTo( '#cardSlots' ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+  }
+
+}
+
+function handleCardDrop( event, ui ) {
+  var slotNumber = $(this).data( 'number' );
+  var cardNumber = ui.draggable.data( 'number' );
+
+  // If the card was dropped to the correct slot,
+  // change the card colour, position it directly
+  // on top of the slot, and prevent it being dragged
+  // again
+
+  if ( slotNumber == cardNumber ) {
+    ui.draggable.addClass( 'correctActive' );
+    ui.draggable.draggable( 'disable' );
+    $(this).droppable( 'disable' );
+    ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+    ui.draggable.draggable( 'option', 'revert', false );
+    correctCards++;
+  
+  } 
+  if ( slotNumber != cardNumber ) {
+    ui.draggable.addClass( 'wrongActive' );
+    ui.draggable.draggable( 'disable' );
+    $(this).droppable( 'disable' );
+    ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+    ui.draggable.draggable( 'option', 'revert', false );
+    correctCards++;
+ 
+  }
+  // If all the cards have been placed correctly then display a message
+  // and reset the cards for another go
+
+  if ( correctCards == 4 ) {
+    $('#successMessage').hide();
+      $(".submit").show();
+    $('#successMessage').animate( {
+      right: '380px',
+      bottom: '0px',
+      width: '150px',
+      height: 'auto'
+    } );
+  }
+
+}
+
+</script>
+<script>
+    $(document).ready(function(){
+        
+     var parent = $("#cardPile");
+                var divs = parent.children();
+                    while (divs.length) {
+                        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+                    }
+    $(".submit").bind("click",function(){
+        $(".correctActive").addClass("position-icon");
+        $(".wrongActive").addClass("position-icon");
+         $('#successMessage').show();
+    });
+});
+    </script>
+</head>
+<body>
+<div id="content">
+<div class="questions">
+  <div>1. Who invented the BALLPOINT PEN?</div>  
+   <div>2. What J. B. Dunlop invented?</div>
+    <div>3. Which scientist discovered the radioactive element radium?</div>
+     <div>4. What Galileo invented?</div>
+     
+    </div>
+  <div id="cardPile"> </div>
+  <div id="cardSlots"> </div>
+
+  <div id="successMessage">
+    <button class="reset" onclick="init()">Reset</button>
+     
+  </div>
+ <div class="submit">Submit</div>
+</div>
+
+
+
+</body>
+</html>
+

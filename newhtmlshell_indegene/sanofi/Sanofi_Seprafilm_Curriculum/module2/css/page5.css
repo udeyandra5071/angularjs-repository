@@ -1,0 +1,138 @@
+.page_box {
+	float: none;
+	position: relative;
+	width: 65%;
+	height: auto;
+	margin: 208px auto;
+	border: 1px solid #c4c4c4;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+	padding: 10px;
+	font-family: Myriad Pro;
+}
+.page_box2 {
+	float: none;
+	position: relative;
+	width: 60%;
+	height: 380px;
+	margin:60px 105px;
+	padding: 10px;
+	font-family: Myriad Pro;
+}
+.day-text{    float: left;
+    position: absolute;
+    margin: 0px auto;
+    width: 100%;
+    text-align: center;
+    left: 181px;
+    top: 22em;
+    color: #000;
+}
+.day-text1{    float: left;
+    position: absolute;
+    margin: 0px auto;
+    width: 100%;
+    text-align: center;
+    left: 51px;
+    top: 25em;
+    color: #000;
+}
+.day-text2{      float: left;
+    position: absolute;
+    margin: 0px auto;
+    width: 100%;
+    text-align: center;
+    left: 67px;
+    top: 25em;
+    color: #000;
+}
+.box-title {
+	float: left;
+	width: 295px;
+	padding: 8px;
+	position: relative;
+	left: 0px;
+	color: #fff;
+	font-size: 17px;
+	top:0px;
+}
+.learning-objective {
+	/*border: 2px solid #fff;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);*/
+	height: 231px;
+}
+menu, ol, ul {
+	padding: 0 0 0 2px;
+}
+.bullet-background-image {
+	padding: 0px 0px 0px 17px;
+	background: url(../images/bullet-point.png);
+	background-repeat: no-repeat;
+	background-position: left 7px;
+}
+.notebox {
+	height: 120px;
+}
+.sup {
+	font-size: 2em;
+	top:1px !important;
+}
+
+.note {
+	margin: 172px auto;
+}
+
+.bullet1 {
+	float: left;
+	width: 93%;
+	position: relative;
+	top: 340px;
+	left: 65px; 
+	z-index:99;
+	color:#000 !important;
+	text-align:center;line-height:38px;
+}
+
+.bullet2 {
+	float: left;
+	width: 93%;
+	position: relative;
+	top: 340px;
+	left: 65px; 
+	z-index:99;
+	color:#000 !important;
+	text-align:center;line-height:38px;
+}
+
+.bullet3 {
+	float: left;
+	width: 93%;
+	position: relative;
+	top: 340px;
+	left: 65px; 
+	z-index:99;
+	color:#000 !important;
+	text-align:center;line-height:38px;
+}
+
+.bullet4 {
+	float: left;
+	width: 93%;
+	position: relative;
+	top: 340px;
+	left: 65px; 
+	z-index:99;
+	color:#000 !important;
+	text-align:center;line-height:38px;
+}
+
+.sub-bullet-left {
+	left: 3em;
+}
+
+.audio-slides img{ position: absolute; top:0px;}

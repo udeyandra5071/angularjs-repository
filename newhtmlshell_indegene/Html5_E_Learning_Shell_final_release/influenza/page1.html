@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome Page</title>
+<head>
+<script>
+    $(document).ready(function(){
+        $('#audio-slideshow').udSynch();
+        $(".jp-previous").prop("disabled",true);
+        $(".jp-previous").removeClass("light-green");
+        $(".jp-previous").addClass("grey");
+         $(".nextFrame").text("Click/Tap forward arrow to continue");
+         $(".disable_block").hide();
+        $(".timeline-disable").hide();
+                 $(".audio-play_1").removeClass("disable-play-icon");
+        $(".audio-pause").removeClass("disable-pause-icon");
+        $(".replay-audio").removeClass("disable-replay-icon");
+        $(".jp-mute").removeClass("disable-mute-icon");
+	  $(".jp-next").prop("disabled",false);
+          $(".jp-next").addClass("light-green");
+            $(".jp-next").removeClass("grey");
+          $(".nextFrame").removeClass("hide");
+    });
+    </script>
+    <style type="text/css">
+        .course-logo{    top: 12.5em;
+    position: relative;
+    left: 7em;
+}
+        .module-name{float: left;
+    position: absolute;
+    width: 75%;
+    color: #fff;
+    font-size: 22px;
+        top:5em;}
+        .course-name{float: left;
+    position: absolute;
+    width: 89.5%;
+    background-color: rgba(1, 67, 114, 0.56);
+    padding: 0.5em;
+    font-size: 25px;
+        top: 13em;
+    border-left: 1px solid #fff;
+    color: #fff;
+    left: 4.2em;}
+        .logo-img{    left: -31px;}
+        .objective-title{font-size: 22px; color: #fff;}
+        .objective-bg{ background: url(images/f1/f2.png);
+    background-position: right 118px;
+    height: 536px;
+    background-repeat: no-repeat;
+    top: 15px;
+    position: relative;}
+    	.padding-zero{    padding: 0px !important;}
+.list-bullet-preicon{       margin: 8px;padding-left:20px !important; background:url(images/bullet3.png); background-repeat:no-repeat;     background-position: 6px 6px;}
+.listing{      left: 0em;
+    bottom: 33em;
+    color: #fff;
+     
+}
+        .li-first{    right: 1em;
+    position: relative;}
+    </style>
+</head>
+<body>
+    
+<div class="row">
+    <div class="col s12">
+    <div class="audio-slides">
+        <div class="course-logo animated fadeIn" data-slide-time="0">
+         <img class="logo-img" src="images/startup_page.png" />
+        <div class="module-name animated fadeInUp">
+       Lorem Ipsum
+        </div>
+      
+        </div>
+          <div class="course-name animated fadeInRight" data-slide-time="0.2">
+        What is Lorem Ipsum?
+        </div>
+        </div>
+         <div class="audio-slides">
+          <div class="objective-title objective-bg" data-slide-time="16">Where does it come from?</div>
+         </div>
+         <ul class="show-previous listing audio-slides">
+          <li class="col s12 padding-zero li-first animated fadeIn" data-slide-time="18">Lorem ipsum dolor sit amet, consectetuer adipiscing elit:</li>
+           <li class="col s12 padding-zero list-bullet-preicon animated fadeIn" data-slide-time="21">Aenean commodo ligula eget dolor. Aenean massa.</li>
+              <li class="col s12 padding-zero list-bullet-preicon animated fadeIn" data-slide-time="26">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</li>
+         </ul>
+    </div>
+    
+</div> 
+</body>

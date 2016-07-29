@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<title>Launch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script>
+function close1(){
+top.close();
+}
+</script>
+<head>
+    <body>
+		<script>
+			if ('ontouchstart' in document.documentElement ) {
+				window.open('mainpage.html','_self');
+			}else{
+				javascript:window.open('mainpage.html','Influenza', 'height=' + (screen.height-50) + ',width=' + (screen.width-10) + ',scrollbars=yes,menubar=yes,status=yes,resizable=yes,directories=false,location=false,left=0,top=0').focus();
+			}
+		</script>
+	</body>
+</html>

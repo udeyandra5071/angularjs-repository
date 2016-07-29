@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<title>Redirection...</title>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <style type="text/css">
+        .button{     background: #e1e1e1;
+    display: none;
+    top: 100px;
+    left: 50%;
+    width: 820px;
+    position: absolute;
+    z-index: 41;
+    padding: 30px;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    margin-left: -440px;
+    margin-top: 108px;}
+        .button a{    float: none;
+    margin: 0px auto;
+    width: 200px;
+    display: block;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px; -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px rgba(0,0,0,0.4); text-decoration: none; font-weight: bold;}
+        .button p{text-align: center;}
+    </style>
+    <script>
+		function OpenInNewTab(url) {
+            var url = "mainpage.html";
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+        $("document").ready(function(){
+              if (navigator.userAgent.match(/iPad/i))
+{
+    console.log("This module works only in landscape mode.");
+   $(".button").fadeIn();
+    window.open('mainpage.html','Influenza', 'height=' + (screen.height-50) + ',width=' + (screen.width-10) + ',scrollbars=yes,menubar=yes,status=yes,resizable=yes,directories=false,location=false,left=0,top=0').focus();
+} 
+        else if(navigator.userAgent.match(/Android|webOS|iPhone|iPod|Blackberry/i) )
+{
+     console.log("This module works well in portrait mode.");
+   $(".button").fadeIn();
+    window.open('mainpage.html','Influenza', 'height=' + (screen.height-50) + ',width=' + (screen.width-10) + ',scrollbars=yes,menubar=yes,status=yes,resizable=yes,directories=false,location=false,left=0,top=0').focus();
+}else if(navigator.userAgent.match(/Mac/i) )
+{
+     console.log("This module works well in portrait mode.");
+   javascript:window.open('mainpage.html','Influenza', 'height=' + (screen.height-50) + ',width=' + (screen.width-10) + ',scrollbars=yes,menubar=yes,status=yes,resizable=yes,directories=false,location=false,left=0,top=0').focus();
+}
+            
+            else {
+    //alert("Desktop");
+    $(".orientation-changed").hide();
+              javascript:window.open('mainpage.html','Influenza', 'height=' + (screen.height-50) + ',width=' + (screen.width-10) + ',scrollbars=yes,menubar=yes,status=yes,resizable=yes,directories=false,location=false,left=0,top=0').focus();
+}   
+        });
+
+   
+		</script>
+<head>
+    <body>
+		
+        <div class="button">
+            <p>Click "<b>launch</b>" to start the course if you have not "<b>Allow</b>" the popup.</p>
+        <a href="#" onclick="OpenInNewTab();">Launch course</div>
+            </div>
+	</body>
+</html>

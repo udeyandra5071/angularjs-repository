@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome Page</title>
+<head>  
+<script>
+    $(document).ready(function(){
+        $('#audio-slideshow').udSynch();
+        $(".nextFrame").empty();
+          $(".nextFrame").removeClass("hide");
+        $(".disable_block").hide();
+        $(".timeline-disable").hide();
+                 //$(".audio-play_1").removeClass("disable-play-icon");
+        //$(".audio-pause").removeClass("disable-pause-icon");
+        //$(".replay-audio").removeClass("disable-replay-icon");
+        //$(".jp-mute").removeClass("disable-mute-icon");
+            $(".jp-previous").prop("disabled",false);
+          //$(".jp-previous").removeClass("grey");
+         //  $(".jp-previous").addClass("light-green");
+     	 // $(".jp-next").prop("disabled",false);
+          //$(".jp-next").addClass("light-green");
+            //$(".jp-next").removeClass("grey");   
+   
+        $("#canvas4").hide();
+        
+    });
+    </script>
+    <style>
+    canvas {
+    z-index: 1;
+}
+        .notepad img{    top: 33px !important;
+    left: -24px !important;}
+        .tonic img{top: 122px !important;
+    left: 60px !important;}
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col s12 audio-slides">
+        
+          <div class="col s6 animated fadeInUp notepad" data-slide-time="0">
+        <img src="images/f3/f3_img2.png" />
+        </div>
+          <div class="col s6 animated fadeInUp tonic" data-slide-time="5">
+        <img src="images/f3/f3_img1.png" />
+        </div>
+    </div>
+    
+</div> 
+</body>
+</html>

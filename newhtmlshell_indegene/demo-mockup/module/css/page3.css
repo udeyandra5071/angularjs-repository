@@ -1,0 +1,69 @@
+.tab_boxv2 {
+     float: left;
+    position: relative;
+   /* bottom: 173px;
+    left: 90px;*/
+    width: 300px;
+}
+.nis_frame_tabMode {
+    float: none;
+    width: 551px;
+    height: 510px;
+    top: 24px;
+    overflow: hidden;
+    left: 391px;
+    z-index: 1;
+    border-left: 1px solid grey;
+	background-color: rgba(27, 117, 187, 187);
+
+}
+#tabv2_1, #tabv2_2, #tabv2_3, #tabv2_4, #tabv2_5, #tabv2_6 {margin:0px;}
+#tabv2_1{ background:url(../images/icons/tabicon1.png) #d6d7d9; background-repeat:no-repeat; background-position:5px center; }
+#tabv2_2{ background:url(../images/icons/tabicon2.png) #d6d7d9 ; background-repeat:no-repeat; background-position:5px center; }
+#tabv2_3{ background:url(../images/icons/tabicon3.png) #d6d7d9; background-repeat:no-repeat; background-position:5px center;}
+#tabv2_4{ background:url(../images/icons/tabicon4.png) #d6d7d9; background-repeat:no-repeat; background-position:5px center; }
+#tabv2_5{ background:url(../images/icons/tabicon5.png) #d6d7d9; background-repeat:no-repeat; background-position:5px center;}
+#tabv2_6{ background:url(../images/icons/tabicon6.png) #d6d7d9; background-repeat:no-repeat; background-position:5px center;}
+.swiper-pagination{display: none;}
+
+.tabs_blockf3 {
+    float: left;
+    position: relative;
+    background-color: #d6d7d9;
+    width: 330px;
+    height: 85px;
+    cursor: pointer;
+    color: #000;
+    padding-top: 33px;
+    padding-left: 87px;
+    font-weight: bold;
+    border-top: 1px solid grey;
+    bottom: 102px;
+}
+
+.list-bullet-preicon3{padding-left:0px !important;}
+.list-bullet-preicon3-white{padding-left:0px !important;  background-position:left center; color:white; background-position: left 5px !important;}
+.activex_1 {
+     background:url(../images/icons/tabiconwhite1.png) #fdb515 !important; background-repeat:no-repeat !important; background-position:12px center !important; background-size:45px !important;
+	
+}
+.activex_2 {
+     background:url(../images/icons/tabiconwhite2.png) #fdb515 !important; background-repeat:no-repeat !important; background-position:12px center !important; background-size:45px !important;
+	
+}
+.activex_3 {
+     background:url(../images/icons/tabiconwhite3.png) #fdb515 !important; background-repeat:no-repeat !important; background-position:12px center !important; background-size:45px !important;
+	
+}
+.activex_4 {
+     background:url(../images/icons/tabiconwhite4.png) #fdb515 !important; background-repeat:no-repeat !important; background-position:12px center !important; background-size:45px !important;
+	
+}
+.activex_5 {
+     background:url(../images/icons/tabiconwhite5.png) #fdb515 !important; background-repeat:no-repeat !important; background-position:12px center !important; background-size:45px !important;
+	
+}
+.activex_6 {
+     background:url(../images/icons/tabiconwhite6.png) #fdb515 !important; background-repeat:no-repeat !important; background-position:12px center !important; background-size:45px !important;
+	
+}

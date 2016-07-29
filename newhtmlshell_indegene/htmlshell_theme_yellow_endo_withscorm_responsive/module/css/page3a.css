@@ -1,0 +1,12 @@
+.tab_box{float: left;position: absolute;bottom: 193px;left: 80px;}
+.tabs_block {float: left;position: relative;background-color: #d6d7d9;width: 265px;height: 60px;cursor: pointer;color: #000;padding-top: 23px;padding-left: 60px;font-weight: bold;border-left: 1px solid grey;
+}
+.position-relative{position:relative !important;}
+.nis_frame_tabMode{float: none;
+    position: absolute;
+    width: 847px;
+    height: 365px;
+    top: 125px;
+    overflow: hidden;
+    left: 90px;
+    z-index: 0; }

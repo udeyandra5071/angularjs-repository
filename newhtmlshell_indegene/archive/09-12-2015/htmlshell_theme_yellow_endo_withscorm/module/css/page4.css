@@ -1,0 +1,25 @@
+.tab_boxv2 {
+     float: left;
+    position: relative;
+   /* bottom: 173px;
+    left: 90px;*/
+    display: block !important;
+    width: 300px;
+}
+.nis_frame_tabMode {
+       float: none;
+    width: 565px;
+    height: 299px;
+    top: 127px;
+    overflow: hidden;
+    left: 355px;
+    z-index: 1;
+        border-left: 1px solid grey;
+}
+#tabv2_1, #tabv2_2, #tabv2_3, #tabv2_4, #tabv2_5{margin:0px;}
+#tabv2_1{ background:url(../images/icons/tabicon1.png) #d6d7d9; background-repeat:no-repeat; background-position:12px center; background-size:45px;}
+#tabv2_2{ background:url(../images/icons/tabicon2.png) #d6d7d9 ; background-repeat:no-repeat; background-position:12px center; background-size:45px;}
+#tabv2_3{ background:url(../images/icons/tabicon3.png) #d6d7d9; background-repeat:no-repeat; background-position:12px center; background-size:45px;}
+#tabv2_4{ background:url(../images/icons/tabicon4.png) #d6d7d9; background-repeat:no-repeat; background-position:12px center; background-size:45px;}
+#tabv2_5{ background:url(../images/icons/tabicon5.png) #d6d7d9; background-repeat:no-repeat; background-position:12px center; background-size:45px;}
+.swiper-pagination{display: none;}

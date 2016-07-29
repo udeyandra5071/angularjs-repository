@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome Page</title>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/page1.css" />
+<script>
+    $(document).ready(function(){
+        $('#audio-slideshow').udSynch();
+        $(".jp-previous").prop("disabled",true);
+        //$(".jp-previous").removeClass("light-green");
+        //$(".jp-previous").addClass("grey");
+         $(".nextFrame").text("Click/Tap forward arrow to continue");
+         $(".disable_block").hide();
+        $(".timeline-disable").hide();
+                 $(".audio-play_1").removeClass("disable-play-icon");
+        $(".audio-pause").removeClass("disable-pause-icon");
+        $(".replay-audio").removeClass("disable-replay-icon");
+        $(".jp-mute").removeClass("disable-mute-icon");
+	  $(".jp-next").prop("disabled",false);
+          //$(".jp-next").addClass("light-green");
+          //  $(".jp-next").removeClass("grey");
+          $(".nextFrame").removeClass("hide");
+    });
+    </script>
+   
+</head>
+<body>
+    
+<div class="row">
+    <div class="col s12">
+  <div class="audio-slides">
+        <div class="page_box animated fadeInDown" data-slide-time="0">
+          <p>Welcome to the Sanofi Biosurgery Seprafilm<sup class="sup">&reg;</sup> Learning System.</p>
+            <p>Module 2, <strong>Pathophysiology and Complications of Adhesions</strong>, discusses the mechanism of adhesion formation and its impact after abdominal surgery, obstetric surgery, and gynecology procedures.</p>
+      </div>
+        </div>
+          <div class="audio-slides">
+              <div class="page_box2  animated fadeInDown" data-slide-time="18">
+                    <div class="box-title">Learning Objectives</div>
+        <div class="col s12 learning-objective">
+            <ul class="audio-slides show-previous">
+          <li class="animated fadeInDown" data-slide-time="21">After completing this module, you should be able to:</li>
+          <li class="bullet-background-image animated fadeInRight" data-slide-time="24">Describe the incidence, etiology, and the stepwise process of adhesion formation.</li>
+          <li class="bullet-background-image animated fadeInRight" data-slide-time="30">Discuss the pathophysiology of adhesion formation.</li>
+          <li class="bullet-background-image animated fadeInRight" data-slide-time="33">Explain why the omentum is not a barrier against adhesion formation.</li>
+          <li class="bullet-background-image animated fadeInRight" data-slide-time="37">Discuss the complications of adhesions after abdominal surgery, obstetric surgery, and gynecology procedures.</li>
+            </ul>
+      </div>
+              </div>
+         
+        </div>
+           <div class="audio-slides">
+              <div class="page_box2 note animated fadeInDown" data-slide-time="51">
+                    <div class="box-title">Note:</div>
+        <div class="col s12 learning-objective notebox">
+            <ul class="audio-slides show-previous">
+          <li class="animated fadeIn" data-slide-time="52">The information in this module is provided for your background information only. Only approved safety and efficacy claims from the Seprafilm<sup class="sup">&reg;</sup> Instructions for Use may be discussed in accordance with policy for the US Seprafilm® Sales Professional.</li>
+          
+            </ul>
+      </div>
+              </div>
+         
+        </div>
+    </div>
+    
+</div> 
+</body>

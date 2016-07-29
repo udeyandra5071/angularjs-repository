@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Animation </title>
+    <script>
+    $(document).ready(function(){
+       $('#audio-slideshow').udSynch();
+         $(".nextFrame").text("Click/Tap forward arrow to continue");
+           $(".disable_block").hide();
+        $(".timeline-disable").hide();
+                 $(".audio-play_1").removeClass("disable-play-icon");
+        $(".audio-pause").removeClass("disable-pause-icon");
+        $(".replay-audio").removeClass("disable-replay-icon");
+        $(".jp-mute").removeClass("disable-mute-icon");
+            $(".jp-previous").prop("disabled",false);
+         // $(".jp-previous").removeClass("grey");
+          // $(".jp-previous").addClass("light-green");
+        	  $(".jp-next").prop("disabled",false);
+         // $(".jp-next").addClass("light-green");
+          //  $(".jp-next").removeClass("grey");
+    });
+    </script>
+   <style type="text/css">
+       .pulmonary{float: right;
+    position: absolute;
+    top: 7.5em;
+    right: 19em;
+    color: #fff;}
+       .pulmonary-circulation{color: #fff;
+    position: absolute;
+    top: 15.4em;
+    float: left;
+    left: 11em;}
+       .airways{    color: #fff;
+    position: absolute;
+    top: 6.2em;
+    float: left;
+    left: 25em;}
+       .left-arrow1{     float: left;position: absolute;left: 29.2em;
+    top: 5.9em;}
+        .left-arrow2{    float: left;
+    position: absolute;
+    left: 30.8em;
+    top: 9.7em;}
+        .left-arrow3 {
+    float: left;
+    position: absolute;
+    left: 38.2em;
+    top: 14em;
+}
+.left-arrow4 {
+        float: left;
+    position: absolute;
+    left: 38.2em;
+    top: 20em;
+}
+    
+       .left-arrow5 {
+       float: left;
+    position: absolute;
+    left: 21.3em;
+    bottom: 16.6em;
+}
+       .left-arrow6 {
+           float: left;
+    position: absolute;
+    left: 28em;
+    top: 20em;
+}
+             .left-arrow7 {
+           float: left;
+    position: absolute;
+     left: 21.5em;
+    top: 13.3em;
+}
+          .left-arrow9{float: left;
+    position: absolute;
+    left: 30.2em;
+    top: 29.5em;}
+       .external-respiration{    color: #fff;
+    position: absolute;
+    top: 14em;
+    float: left;
+    right: 18em;}
+            .transportation{color: #fff;
+    position: absolute;
+    top: 23em;
+    float: left;
+    right: 8.5em;}
+       .alveoli{    color: #fff;
+    position: absolute;
+    top: 10.1em;
+    float: left;
+    left: 27.2em;}
+       .systematic-circulation{ color: #fff;
+    position: absolute;
+    top: 23.7em;
+    float: left;
+    right: 46em;
+}
+       .left-arrow8{float: left;
+    position: absolute;
+    left: 28em;
+    top: 14.2em;}
+            .left-arrow10{    float: left;
+    position: absolute;
+    left: 35.4em;
+    top: 29em;}
+       .internal-respiratory{color: #fff;
+    position: absolute;
+        top: 30.7em;
+    float: left;
+    right: 19em;}
+       .cellular{    color: #fff;
+    position: absolute;
+    top: 29.9em;
+    float: left;
+    right: 37em;}
+       .bt-arrow1{    float: left;
+    position: absolute;
+    left: 30.7em;
+    top: 28.7em;}
+       .bt-arrow2{    float: left;
+    position: absolute;
+    left: 26.4em;
+    top: 27em;}
+       .bt-arrow3{    float: left;
+    position: absolute;
+    left: 38em;
+    top: 28em;}
+       .bt-text1{    float: left;
+    position: absolute;
+    left: 28.2em;
+    top: 32.8em;
+    color: #fff;
+    font-size: 13px;}
+         .bt-text2{float: left;
+    position: absolute;
+    left: 42em;
+    top: 29.5em;
+    color: #fff;}
+       .tp-text{float: left;
+    position: absolute;
+    left: 1.2em;
+    top: 0.8em;
+    color: #fff;
+    font-size: 17px;}
+       .make-it-small{font-size: 11px;}
+  
+    </style>
+</head>
+<body>
+<div class="row">
+<div class="col s12">
+    <div class="audio-slides">
+    <div class="block fadeInDown" data-slide-time="0">
+        <iframe class="block"  src="createjs/video1.html" frameborder="0" scrolling="no"></iframe>
+        
+        </div>
+        <div class="arrow1 animated fadeInDown" data-slide-time="0.5"><div class="tp-text animated fadeIn">O<span class="make-it-small">2</span></div><img src="images/f5/other_arrows/1.png" /></div>
+        <div class="pulmonary animated fadeInRight" data-slide-time="3">Pulmonary Ventilation</div>
+        <div class="left-arrow1 animated fadeInRight" data-slide-time="6.8"><img src="images/f5/1.png" /></div>
+        <div class="airways animated fadeInRight" data-slide-time="7">Airways</div>
+        <div class="external-respiration animated fadeInRight" data-slide-time="9">External Respiration</div>
+        <div class="left-arrow2 animated fadeInRight" data-slide-time="11.8"><img src="images/f5/1.png" /></div>
+        <div class="alveoli animated fadeInRight" data-slide-time="12">Alveoli</div>
+        <div class="left-arrow3 animated fadeInDown" data-slide-time="18"><img src="images/f5/other_arrows/2.png" /></div>
+        <div class="left-arrow4 animated fadeInDown" data-slide-time="25"><img src="images/f5/other_arrows/3.png" /></div>
+        <div class="transportation animated fadeInRight" data-slide-time="27">Transport of respiratory gases in the blood</div>
+        <div class="left-arrow5 animated fadeInRight" data-slide-time="30"><img src="images/f5/4.png" /></div>
+        <div class="left-arrow6 animated fadeInUp" data-slide-time="30.1"><img src="images/f5/other_arrows/4.png" /></div>
+        <div class="systematic-circulation animated fadeInRight" data-slide-time="31">Systematic Circulation</div>
+         <div class="left-arrow7 animated fadeInRight" data-slide-time="32"><img src="images/f5/2.png" /></div>
+        <div class="left-arrow8 animated fadeInUp" data-slide-time="32.5"><img src="images/f5/other_arrows/5.png" /></div>
+        <div class="pulmonary-circulation animated fadeInRight" data-slide-time="33">Pulmonary Circulation</div>
+        <div class="internal-respiratory animated fadeInUp" data-slide-time="37">Internal Respiratory</div>
+         <div class="left-arrow9 animated fadeInRight" data-slide-time="47"><img src="images/f5/1.png" /></div>
+         <div class="cellular animated fadeInRight" data-slide-time="49">Cellular respiration</div>
+        <div class="left-arrow10 animated fadeIn" data-slide-time="50"><img src="images/f5/other_arrows/8.png" /></div>
+        <div class="three-arrows animated fadeIn" data-slide-time="52">
+            <div class="bt-arrow1 animated fadeIn"><img  src="images/f5/other_arrows/9.png" /></div>
+            <div class="bt-arrow2 animated fadeIn"><img  src="images/f5/other_arrows/7.png" /></div>
+            <div class="bt-arrow3 animated fadeIn"><img  src="images/f5/other_arrows/6_1.png" /> </div>
+            <div class="bt-text1 animated fadeIn">CO<span class="make-it-small">2</span></div>
+            <div class="bt-text2 animated fadeIn">O<span class="make-it-small">2</span></div>
+        </div>
+    </div>
+    </div>
+    </div>
+<link rel="stylesheet" type="text/css" href="css/page5.css" />
+</body>
+</html>

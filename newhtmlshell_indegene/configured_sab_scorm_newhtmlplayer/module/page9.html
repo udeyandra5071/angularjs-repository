@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9, IE=10, IE=11" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+<title>Page 9</title>
+<style>
+#fr9dropcontent {
+    left: 405px;
+    position: absolute;
+    top: 155px;
+    width: 203px;
+}
+.fr9drop {
+    display: block;
+      background:#f4f4f4;
+    height: 46px;
+    width: 203px;
+    margin-bottom: 9px;
+    position: absolute;
+}
+#fr9dragcontent {
+    height: 290px;
+    left: 641px;
+    position: absolute;
+    top: 155px;
+    width: 203px;
+}
+.fr9drag {
+    display: block;
+    background:#f4f4f4;
+    color: #000;
+    cursor: pointer;
+    font-family: arial;
+    height: 46px;
+    line-height: 45px;
+    text-align: center;
+    width: 203px;
+    z-index: 7;
+    position: absolute;
+    font-size: 15px;
+    left: 36px;
+}
+#fr9content {
+    position: absolute;
+    width: 340px;
+    height: 380px;
+    list-style-type: none;
+    right: 615px;
+    top: 65px;
+    font-size: 15px;
+}
+#text1_fr9_feedback {
+    position: absolute;
+    width: 575px;
+    height: 278px;
+    z-index: 555;
+    top: 102px;
+    left: 221px;
+    display: none;
+    font-size: 14px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+#fr9msg {
+    display: none;
+    position: absolute;
+    bottom: 78px;
+    left: 113px;
+    font-size: 15px;
+    text-align: left;
+    width: 771px;
+}
+#fr9clear_all{    float: left;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background-color: #f4f4f4;
+    right: 32px;
+    bottom: 0px;}
+	#text1_fr9_feedback{    float: left;
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    background: #f4f4f4;}
+</style>
+<script>
+$("#slider ").hide();
+		$("#pauseplaybtn").hide();
+		$("#replaybtn").hide();
+		$("#mutebtn").hide();
+var fr9answers = new Array("Single electrode","Multiple electrodes");
+var fr9dragleftpos;
+var fr9dragtoppos;
+var startpos = [];
+var finalpos = [];
+var fr9attempted;
+var fr9results;
+var attempts =0 ;
+$('#transcript_btn').css({"background-image":"url(images/show-transcript-bg_off.png)","cursor":"pointer"});
+
+
+$('.fr9drag').each(function(index){
+	startpos[index] = [];
+	startpos[index][0] = parseInt($(this).css("top"));
+	startpos[index][1] = parseInt($(this).css("left"));
+	//alert(startpos[index][0]+" : "+startpos[index][1]);
+});
+
+
+
+$(document).ready(function(){
+	setInterval(function(){
+		$('.fr9drag').css('z-index',7);
+		setTimeout(function(){$('.fr9drag').css('z-index',8)},50);	
+	},200);
+	//$('#fr9shw_ans').hide();
+	$("#fr9submit").hide();
+	$('#fr9clear_all').hide();
+	$('.fr9drag').draggable({ revert : true , revertDuration: 400 });
+	fr9attempted = new Array(fr9answers.length);
+	fr9results = new Array(fr9answers.length);
+
+	for(i=0;i<fr9answers.length;i++) { fr9attempted[i] = 0; fr9results[i] = 0;}
+	$('.fr9drop').each(function(index){
+		finalpos[index] = [];
+		finalpos[index][0] = parseInt($(this).css("top"));
+		finalpos[index][1] = parseInt($(this).parent().css("left"));
+		
+	});
+	
+	
+	$('.fr9drop').droppable({
+		drop: function(event,ui) {
+		isSkipLA=false;
+			$("#quiz_newtxt").hide();
+			var Index = $(this).index('.fr9drop');
+			var dragIndex = ui.draggable.index('.fr9drag');
+			fr9dragleftpos = parseInt($(this).parent().css("left"))-parseInt(ui.draggable.parent().css("left"));
+			fr9dragtoppos = parseInt($(this).css("top"))+parseInt($(this).parent().css("top"))-parseInt(ui.draggable.parent().css("top"));
+			if($.trim(fr9answers[Index])==$.trim(ui.draggable.children('.fr9txt').html())) fr9results[dragIndex] = 1;
+			fr9attempted[Index] = 1;
+			ui.draggable.draggable("option", "revert", false);
+			ui.draggable.draggable({ disabled: true });
+			ui.draggable.removeClass("ui-state-disabled");
+			$(this).droppable({ disabled: true });
+			ui.draggable.animate({
+				left : fr9dragleftpos,
+				top : fr9dragtoppos
+			}, 400, function(){});
+			fr9checkComplete();
+		}		
+    });
+	
+	$("#fr9submit").bind("click", function(){
+		$("#quiz_newtxt").hide();
+		isSkipLA=true;
+		
+		$(this).hide();
+		$("#fr9clear_all").show();
+		fr9showResults();
+		if(attempts == 2)
+			{
+				$('#fr9shw_ans').show();
+				$("#fr9clear_all").hide();
+			}
+			if(fr9results.length==2) {
+		$("#fr9shw_ans").hide();
+		}
+	});
+	
+	$('#fr9clear_all').bind("click", function(){
+			$('.fr9drag').css('cursor','pointer');
+			$(this).hide();
+		$('#fr9res').hide();
+		$("#fr9clear_all").hide();
+		$('.fr9drag').draggable( "option", "revert", true );
+		$('.fr9drag').draggable({ disabled: false });
+		$('.fr9drop').droppable({ disabled: false });
+		
+		
+		$('.fr9drag').each(function(index){
+			$(this).animate({
+				left : startpos[index][1],
+				top : startpos[index][0]
+			}, 100, function(){});
+			//alert(startpos[index][0]+" : "+startpos[index][1]);
+		});
+		for(i=0;i<fr9attempted.length;i++) { fr9attempted[i] = 0; fr9results[i] = 0;}
+		$('.fr9img').hide();
+		$('#fr9msg').hide();
+	});
+});
+
+function fr9checkComplete(){
+	$('#fr9clear_all').show();
+	var total = 0;
+	for(i=0;i<fr9attempted.length;i++) total += fr9attempted[i];
+	if(total == fr9attempted.length) {
+		attempts++;
+		//fr9showResults();
+		$("#fr9submit").show();
+		$('#fr9clear_all').hide();
+		
+	}
+	if(fr9results.length==2) {
+		$("#fr9shw_ans").hide();
+		}
+}
+
+function fr9showResults() {
+	var total = 0;
+	$('.fr9drag').each(function(index){
+		//alert(fr9results[index]);
+		if(fr9results[index]==1) $('.fr9drag:eq('+index+') .fr9img img').attr("src","images/quiz-choice-correct1.png");
+		else $('.fr9drag:eq('+index+') .fr9img img').attr("src","images/quiz-choice-incorrect1.png");
+		$('.fr9img').show();
+		total += fr9results[index];
+	});
+	//for(i=0;i<fr9attempted.length;i++) { alert(fr9results[i]);}
+	if(total==fr9results.length) {
+		$('.fr9drag').css('cursor','auto');
+		//$('#fr9msg').html("Correct! Great job! <br><b>Feedback:</b><br>In sequential mapping, information is collected separately from different locations using a single electrode, whereas in simultaneous mapping, information is collected from different locations using multiple electrodes.<sup>18</sup>").show();
+		$('#fr9msg').html("<b>All of your answers are correct.</b>").show();
+		
+		$('#fr9shw_ans').hide();
+		$('#fr9res').hide();
+		$("#fr9shw_ans").hide();
+		showAttractorMessage();
+		$("#fr9clear_all").hide();
+		$('#resultCheck9').html('<br><b>Correct!</b>');
+		setTimeout(function(){$('.text1_fr9_feedback_bg,#text1_fr9_feedback,.fr9close').fadeIn().show();},750);
+	}
+	else {
+		$('#resultCheck9').html('<br><b>Incorrect.</b>');
+		if(attempts == 1){
+			$('#resultCheck9').html('<br><b>Incorrect.</b>');
+			$('.fr9drag').css('cursor','auto');
+			$('#fr9msg').html(total+" of your answers are correct, Please try again.").show();
+			//if(attempts == 2)$('#fr9shw_ans').show();
+		   //$('#fr9shw_ans').show();
+			$("#fr9clear_all").find("img").attr({src: "../module/images/quiz-tryagain.png"});
+		}
+
+		else {
+			$('#fr9msg').html('Click/tap "SHOW ANSWER" to know the answers.').show();
+			$('#fr9shw_ans').show();
+			$('#fr9res').hide();
+		}
+	}
+		if(fr9results.length==2) {
+		$("#fr9shw_ans").hide();
+		}
+}
+
+$('#fr9shw_ans img').bind("click", function(){
+	setTimeout(function(){$('.text1_fr9_feedback_bg,#text1_fr9_feedback,.fr9close').fadeIn().show();},50);
+	var doneId = new Array(fr9answers.length);
+	$("#fr9shw_ans").fadeOut();
+	registerAttractor();
+	$('#fr9res').fadeOut();
+	$('#fr9msg').hide();
+	//alert(doneId.length);
+	for(i=0;i<doneId.length;i++) doneId[i] = 0;
+	$('.fr9drop').each(function(dropindex) {
+		$('.fr9drag').each(function(dragindex) {		
+			if(fr9answers[dropindex]==$('.fr9drag:eq('+dragindex+') .fr9txt').html() && doneId[dragindex] == 0) {
+				$('.fr9img').hide();
+				$('.fr9img img').attr("src","images/quiz-choice-correct1.png");
+				$(this).animate({
+					left : finalpos[dropindex][1]-parseInt($(this).parent().css("left")),
+					top : finalpos[dropindex][0]
+				}, 600, function(){});
+				doneId[dragindex] = 1;
+				return false;
+			}			
+		});		
+	});
+	$('.fr9drop').droppable({ disabled: true });
+	$('.fr9img').show();
+	//$('#fr9msg').html("<b>Correct answers are shown. Click/tap RESET to try again.</b>").show();
+	//$('#fr9res').show();
+	for(i=0;i<fr9attempted.length;i++) { fr9attempted[i] = 0; fr9results[i] = 0;}
+	//showAttractorMessage();
+	isSkipLA = true;
+	
+});
+
+$("#fr9close").bind("click",function(){
+$(this).hide();
+	$('#text1_fr9_feedback').hide();
+	
+	});
+
+
+</script>
+</head>
+<body>
+<div id="fr9Bg" style="position:absolute; left:0px; top:0px; width:1024px; height: 512px; background-image: url('images/frame-bg.jpg'); background-repeat:no-repeat;"><span style="margin-left:20px; position: absolute; top:33px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:16px;"><b>
+	<div class='laHeading' >Test your knowledge.</div>
+	Drag and drop the following electrodes to their corresponding mapping techniques.</b></span
+	><div>
+    	<div style="width:76%; height:1px; margin-left:30px;"><span style="font:Arial, Helvetica, sans-serif; font-size:31px; font-weight:bold;"></span>
+        <span style="font-family:Arial, Helvetica, sans-serif;font-size:15px; position: absolute;left:130px; top:108px;"><strong><b>Mapping Techniques</b></strong></span>
+         <span style="font-family:Arial, Helvetica, sans-serif;font-size:15px; position: absolute;left:735px; top:108px;"><strong><b>Electrodes</b></strong></span>
+        </div>
+        <div id="fr9dropcontent">
+        	<div id="fr9drop_1" class="fr9drop" style="top:0px;" >&nbsp;</div>
+            <div id="fr9drop_2" class="fr9drop" style="top:77px;" >&nbsp;</div>
+            
+        </div>
+		<div id="fr9dragcontent">
+        	<div id="fr9drag1" class="fr9drag" style="top:0px;" >
+		    <div class="fr9img"><img src="images/quiz-choice-correct1.png" /></div>
+				<div class="fr9txt">Multiple electrodes</div>
+			</div>
+            <div id="fr9drag2" class="fr9drag" style="top:77px;" >
+			<div class="fr9img"><img src="images/quiz-choice-correct1.png" /></div>
+				<div class="fr9txt">Single electrode</div>
+			</div>
+        
+		</div>
+	   
+        <div id="fr9content" style="top:65px;">
+        <ul style="height:400px; line-height:17px;">
+        	<li  style="margin-top:103px;">Sequential mapping technique</li>
+            <li  style="margin-top:60px;">Simultaneous mapping technique</li>
+            </ul>
+        </div>
+		
+		<div id="text1_fr9_feedback">
+		<div id="resultCheck9">Correct</div>
+		<p  class="text1_fr9_feedback1"><b>Feedback:</b> <br>
+            In sequential mapping, information is collected separately from different locations using a single electrode, whereas in simultaneous mapping, information is collected from different locations using multiple electrodes.<sup>18</sup>
+            <br><br>
+            <b>Reference:</b><br>
+                18. Gepstein L, Hayam G, Ben-Haim A. <i>Circulation.</i> 1997;95:1611-1622.
+		</p>
+	</div>
+		<div  id="fr9close" class="fr9close"><img src="images/close.png" width="33" height="33"></div>
+    
+		<div id="fr9shw_ans">Show Answer</div>
+		<div id="fr9clear_all">Clear All</div>
+		<div id="fr9submit">Submit</div>
+		
+		<div id="fr9msg"></div>
+		</div>
+    </div>
+
+<script>
+$(document).ready(function(){
+$(".nis_frame_tabMode").hide();
+
+});
+</script>
+</body>
+</html>

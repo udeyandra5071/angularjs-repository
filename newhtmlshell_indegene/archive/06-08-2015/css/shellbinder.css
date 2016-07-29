@@ -1,0 +1,77 @@
+.mainshell_ipad{float:none; width:1024px;height: 596px; margin:0px auto;}
+.height{height:5px;}
+.height1{height:15px;}
+.height2{height: 529px; background#f4f4f4;}
+.padding1{padding-top:9px !important;}
+.contain_image{    float: left;right: 11px;position: relative;z-index: -4;}
+.z-index{float:left; position:absolute;z-index:-3; opacity:0.7;}
+.z-index1{z-index:2;}
+.widthoverlay{width:1024px !important;}
+.widthoverlay1{width:1024px !important;float:none; margin:0px auto; position:relative}
+.containers{width:100% !important;}
+.moveup{    position: relative;
+    bottom: 0.8rem;}
+	.moveup1{position:relative;     bottom: 7px;}
+	.transcript_box {
+    display: none;
+    position: absolute;
+    width: 320px;
+    height: auto;
+    bottom: 7.6rem;
+    right: 19.2rem;
+    border: 1px solid #c4c4c4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 35;
+}
+.launch_wrapper {
+    float: none;
+    width: 1024px;
+    height: 670px;
+    margin: 0px auto;
+    z-index: 10;
+    background: url(../images/coverbg.jpg);
+    position: absolute;
+    background-size: 1024px auto;
+	background-repeat:no-repeat;
+}
+.launchbox{    float: none;
+    position: absolute;
+    width: 1024px;
+    height: 645px;
+    z-index: 5;
+    top: -64px;}
+.footerpadding {
+    padding-left: 0px !important;
+      top: 32.5rem;
+    position: relative;
+}
+.launch_button {
+    position: absolute;
+    width: 135px;
+    height: 38px;
+    z-index: 1;
+      top: 89%;
+    left: 58%;
+    margin: -100px 0 0 -150px;
+    text-align: center;
+    padding-top: 8px;
+    background: #285771;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+}
+.page{    position: absolute;
+    bottom: 1rem;
+    width: 90%;
+    left: 2rem;}
+		.z-index1{    position: absolute;
+    z-index: 1;
+    }
+@media screen (max-width:1024px) and (min-width:1024px)
+{
+nav{width:100% !important;}
+.containers{width:100% !important;}
+}

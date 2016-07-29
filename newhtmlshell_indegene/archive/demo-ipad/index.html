@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <title>jQuery UI Draggable Quiz Plugin</title>
+  
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+  <script src="jquery.ui.touch-punch.min.js"></script>
+  <script type="text/javascript" src="jquery.ui.draggable.quiz.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/dragndrop.css" />
+  <script type="text/javascript">
+    $(function(){
+      $('#quiz').draggableQuiz({
+        answers: {
+          '#question-1' : [ '.answer-1' ], 
+          '#question-2' : [ '.answer-2' ], 
+          '#question-3' : [ '.answer-3' ], 
+          '#question-4' : [ '.answer-4' ],
+          '#question-5' : ['.answer-5']
+        }
+       
+      });
+      var parent = $(".questions");
+    var divs = parent.children();
+    while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    }
+       
+
+});
+
+
+
+
+    });
+      
+  </script>
+  
+</head>
+
+<body>
+
+<div id="quiz">
+  
+  <div class="questions">
+    
+  <div data="answer-1" class="question answer-1">Question1 </div>
+<div data="answer-2" class="question answer-2">Question2 </div>
+<div data="answer-3" class="question answer-3">Question3</div>
+<div data="answer-4" class="question answer-4">Question4</div>
+<div data="answer-5" class="question answer-5">Question5</div>
+    
+  </div> <!-- / .questions -->
+    <div class="question-blocks">
+     <div class="question-block question-block1"> simply dummy text of the printing and typesetting.<span class="answerme answer_1">Question1</span></div>
+         <div class="question-block question-block2"> simply dummy text of the printing and typesetting.<span class="answerme answer_2">Question2</span></div>
+         <div class="question-block question-block3"> simply dummy text of the printing and typesetting.<span class="answerme answer_3">Question3</span></div>
+         <div class="question-block question-block4"> simply dummy text of the printing and typesetting.<span class="answerme answer_4">Question4</span></div>
+         <div class="question-block question-block5"> simply dummy text of the printing and typesetting.<span class="answerme answer_5">Question5</span></div>
+    </div>
+  
+  <div class="choices">
+   
+    
+    <div id="question-1" class="choice">
+    
+    </div> <!-- / .choice -->
+    
+    <div id="question-2" class="choice">
+     
+    </div> <!-- / .choice -->
+    
+    <div id="question-3" class="choice">
+     
+    </div> <!-- / .choice -->
+    
+    <div id="question-4" class="choice">
+     
+    </div> <!-- / .choice -->
+     <div id="question-5" class="choice">
+     
+    </div> <!-- / .choice -->
+  </div> <!-- / .choices -->
+  <input type="button" onclick="dragDropResetForm();return false" value="Reset" class="submit">
+<input type="button" value="submit" id="submitdata"  class="reset" />
+    <input type="button" value="Show Answer" id="showanswer"  class="showanswer" />
+    <span class="items"></span>
+    <span class="dragitems"></span>
+</div> <!-- / #quiz -->
+  
+
+    
+</body>
+</html>

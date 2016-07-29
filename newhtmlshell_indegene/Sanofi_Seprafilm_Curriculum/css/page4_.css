@@ -1,0 +1,78 @@
+.slideshow1{     float: none;
+    position: relative;
+    width: 75%;
+    margin: 0px auto;
+    height: 328px;
+    right: 9px;
+    top: 105px;
+	}
+	.slideshow_bulletbg{    background: url(../images/f4/img.png);
+    background-repeat: no-repeat;
+    background-position: right center;height: 328px;}
+	.course-logo{    float: none;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin: 0px auto;}
+	.course-logo img{    float: none;
+    margin: 0px auto;
+    width: 100%;
+    height: auto;}
+	
+.f2img{    float: none;
+    position: absolute;
+    width: 491px;
+    height: 328px;
+    margin: 38px 0px 0px 277px;}
+	.f2img  img{    float: none;
+    margin: 0px auto;
+    width: 100%;
+    height: auto;}
+
+	
+.card-width{width:100% !important;}
+.course-title{ font-size:38px;}
+.card-image img { position:relative !important;}
+.putcarddown{    top: 20px;
+    position: relative;
+    left: 2px;
+}
+.scaling_minimize
+{
+	transform: scale(0.7, 0.7);
+-ms-transform: scale(0.7, 0.7);
+-webkit-transform: scale(0.7, 0.7);
+}
+.card-content .image{position:relative !important; float:none; margin:0px auto;}
+.learning-objective-header{ padding:10px; font-size:18px;}
+.padding-zero{    padding: 0px !important;}
+.list-bullet-preicon{padding-left:20px !important; background:url(../images/bullet.png); background-repeat:no-repeat; background-position:left center;}
+.list-bullet-preicon1{padding-left:41px !important; background:url(../images/bullet1.png); background-repeat:no-repeat;  background-position: 20px center;}
+@media screen and (max-width:800px) and (min-width:768px)
+{
+        
+   .slideshow1 {
+    width: 85%;
+    height: 730px;
+    right: 0px;
+    top: 36px;
+}
+
+   .slideshowind1 {
+    width: 85%;
+    height: 730px;
+    right: 0px;
+    top: 36px;
+}
+.course-title {
+    bottom: 0px;
+    position: absolute;
+    left: 155px;}    
+    .course-logo {
+        top: 235px;}
+.card-width {
+    padding: 10px;
+}
+#slide2,#slide3,#slide4,#slide5,#slide6,#slide7,#slide8,#slide9{    padding-top: 135px;}
+    .arrow-indicator {right: 59px;}
+}

@@ -1,0 +1,76 @@
+.block1{    float: left;
+    position: relative;
+    top: 84px;
+      left: 75px;
+    font-size: 20px;
+    font-weight: bold;}
+.block2{    float: left;
+    position: relative;
+    top: 90px;
+      left: 75px;
+    font-size: 20px;
+    font-weight: bold;}
+.block3{    float: left;
+    position: relative;
+        top: 133px;
+    left: 75px;
+    font-size: 20px;
+    font-weight: bold;}
+.block4{    float: left;
+    position: relative;
+   top: 163px;
+   left: 75px;
+    font-size: 20px;
+    font-weight: bold;}
+.block5{    float: left;
+    position: absolute;
+        top: 41px;
+    left: 51%;
+    font-size: 20px;
+    font-weight: bold;}
+.block6{    float: left;
+    position: relative;
+     top: 68px;
+    left: 78px;
+    font-size: 20px;
+    font-weight: bold;}
+.block-1{    float: left;
+   position: absolute;
+    top: 68px;
+    left: 370px;
+    font-size: 20px;}
+.block-2{    float: left;
+    position: relative;
+        top: 119px;
+    left: 349px;
+    font-size: 20px;
+}
+.block-3{    float: left;
+    position: absolute;
+    top: 194px;
+        left: 165px;
+    font-size: 20px;
+}
+.block-4{    float: left;
+    position: absolute;
+  top: 302px;
+        left: 165px;
+    font-size: 20px;
+    }
+.block-5{    float: left;
+    position: relative;
+       top: 274px;
+    left: 340px;
+    font-size: 20px;
+    font-weight: bold;
+    }
+.block-6{    float: left;
+     position: absolute;
+        top: 384px;
+    left: 275px;
+    font-size: 20px;
+    }
+.jp-video-360p{left: 63px;
+    position: absolute;
+    top: 80px;}
+.small{font-size: 12px;}

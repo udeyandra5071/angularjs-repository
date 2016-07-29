@@ -1,0 +1,126 @@
+<%@ include file="context.jsp" %>
+<% 
+   ProfileEnrollment pe=null;
+   CourseStructureManager csm = CourseStructureManager.getInstance(pctx.getClientID());
+   ProfileEnrollmentManager pem = new ProfileEnrollmentManager(pctx.getClientID(), pctx.getLoginID(), 0, null);
+   LearningActivitySummary las = new LearningActivitySummary(pctx.getLoginID(), pctx.getClientID());
+   List list = pem.listDistinctCourses("getValidFrom", 1);
+   
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Corporate Call center Inc.</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<link rel="stylesheet" href="styles/style.css"/>
+<script>
+    var medscowin = null;
+        var options = 'toolbar=no,directories=no,status=no,scrollbar=no,resizable=no,menubar=no,height=560,width=780';
+        function popwin2(theURL, options) {
+            if (medscowin && typeof(medscowin.closed) != "unknown" && !medscowin.closed) medscowin.close();
+            medscowin = window.open(theURL,'medscowin', options);
+            medscowin.focus();
+        }
+    
+</script>      
+    
+</head>
+
+<body>
+<div id="main_inner_01">
+	<div id="header">
+            <div class="left">
+                <img src="images/user_after_login.png" alt="" title="" /><div class="logged_in">Welcome <span><%=StringUtils.xnull(profile.getFirstName()) %> <%=StringUtils.xnull(profile.getLastName()) %></span></div>
+            </div>
+            <div class="right">
+                    <a class="logout" href="index.jsp?logoff=y">Logout</a>
+                   
+            </div>
+    </div>
+	<div id="content">
+        <div class="block">
+	<% for (int i = 0; i < list.size(); i++) {
+                pe = (ProfileEnrollment) list.get(i);
+                int elpid = pe.getBlock().getElpID();
+                List childlist = csm.getChildren(elpid);
+                     
+                for (int t = 0; t < childlist.size(); t++) {
+                    CourseStructure cs = (CourseStructure) childlist.get(t);
+                    AssignableUnit au = AssignableUnitManager.getInstance(pctx.getClientID()).getAssignableUnit(cs.getNodeID());
+                    if (au == null) {
+                        continue;
+                    }
+                    LearningObject lo = au.getMLO();
+                    LearningActivity la = las.get(lo.getUrl());
+                    String url2 = "";
+                    if (lo.getUrl2() != null && lo.getUrl2().length() > 1) {
+                        url2 = lo.getUrl2();
+                    }
+                    String status = LearningActivity.LESSON_STATUS[LearningActivity.STATUS_NOTATTEMPTED];
+                    boolean launchable = true;
+                    boolean preReqsComplete = las.arePrereqsCompleted(elpid, au.getAuID());
+                 if (!preReqsComplete) {
+                        status = "<b>Prerequisites<br>Not Met</b>";
+                         launchable = false;
+                    }  else if (la != null) {
+                        status = la.getLessonStatus();
+                        if(la.getStatus() == LearningActivity.STATUS_PASSED){launchable = false;}
+                         else if (la.getStatus() == LearningActivity.STATUS_PASSED || la.getStatus() == LearningActivity.STATUS_FAILED) {
+                            status += "("+ (int)la.getScore() +"%)";
+                        }
+			}
+                   
+                    
+                     String desc = jsonFormatString(lo.getDescription() == null ? "" : lo.getDescription());
+                  /*   String keyword=jsonFormatString(lo.getKeywords() == null ? "" : lo.getKeywords());
+                    
+                    String sections[] = StringUtils.split(keyword, ";");
+                    if (keyword.length() < 1) {
+                     sections = new String[2];
+                                  sections[0] = "";
+                                  sections[1] = "&nbsp;";   
+                    }*/
+                      
+                   %> 
+            
+            <%if(status.toLowerCase().equals("passed")||status.toLowerCase().equals("completed") || status.toLowerCase().equals("incomplete")){ %>
+            <div class="module">
+            <%}else{ %>
+            <div class="module">
+            <%} %>
+           
+            	<h2><%=lo.getTitle() %></h2>
+                <p><%=desc%></p>
+                
+                <%if(lo.getTitle().equalsIgnoreCase("Module 02")) {%>
+                 <a href="#" id="status" class="no_margin" style="float:none;cursor:pointer;" >
+                <span>Coming Soon</span>
+                <%}else{ %>
+        <a href="#"
+	<% if(status.toLowerCase().equals("passed")||status.toLowerCase().equals("completed") || status.toLowerCase().equals("incomplete")){%> 
+	id="status" 
+	<%}%>
+	class="no_margin" style="float:none;cursor:pointer;" onclick=<%=launchable?"popwin2('/lms/scorm/index.jsp?coursemap=/ccc_securityawarenesstraining/services.jsp&au="+au.getAuID()+"','"+ url2 +"');":""%>>       
+		<%= status.toLowerCase().equals("passed")||status.toLowerCase().equals("completed") || status.toLowerCase().equals("incomplete")?"<span id='status'>"+status+"</span>":"<span>Launch</span>"%>
+		
+		<%} %>
+		</a>
+            </div>
+           
+ <%}}%>
+        </div>
+    </div>
+    <div class="footer_inner">
+        <div class="copyright" style="line-height:25px; color:#6e6e6e;">&copy;2014 Corporate Call Center, Inc. - All Rights Reserved</div>
+    </div>
+</div>
+</body>
+</html>
+            
+            <%!
+    private String jsonFormatString(String str) {
+        String ret = str.replaceAll("[\"]{1}", "\\$1").replaceAll("[\n\r]", " ");
+        return (ret);
+    }
+%>

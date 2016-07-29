@@ -1,0 +1,28 @@
+<html>
+
+<head>
+<script language="javascript" src="configuration.js"></script>
+<script language="javascript" src="utils.js"></script>
+<script type="text/javascript">
+   	//Fix dispatch root to be SSL when launching in SSL
+   	if(window.location.protocol == "https:"){
+    	DispatchRoot = DispatchRoot.replace('http:', 'https:');
+   	}
+    include_script(DispatchRoot + "dispatch.client.driver.js");
+</script>
+</head>
+
+<body style="background-color: #FFCCCC">
+
+This is the pipe page. This will be a hidden frame for talking to the SD object from dispatch.html  <script>document.write("document.domain = " + document.domain);</script>
+	<button onclick="sendPipeMessage()">Send Pipe Message</button>
+
+	<br />
+
+	<p>
+		<div id="output"></div>
+
+	</p>
+
+</body>
+</html>

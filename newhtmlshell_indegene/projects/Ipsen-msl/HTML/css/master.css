@@ -1,0 +1,156 @@
+.button {
+          float: right;
+    width: 133px;
+    padding: 10px 10px;
+    color: #ffffff;
+    background-color: #1B75BB;
+    border: 1px solid #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 0px;
+    text-decoration: none;
+    text-align: center;
+    z-index: 5;
+    position: absolute;
+    right: 1.3rem;
+}
+.button:hover {
+    background-color:#40aadc;
+}
+
+.startQuiz {
+    margin-top: 40px;
+}
+
+.tryAgain {
+    margin: 20px 0;
+}
+
+/* clearfix */
+.quizArea, .quizResults {
+    zoom: 1;
+}
+.quizArea:before, .quizArea:after, .quizResults:before, .quizResults:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+}
+.quizArea:after, .quizResults:after {
+    clear: both;
+}
+
+.quizHeader{
+padding-top: 20px;
+Padding-left:32px;
+}
+
+.questionCount {
+    font-size: 14px;
+    display: none;
+   
+}
+.questionCount span {
+    font-weight: bold;
+}
+
+ol.questions {
+    margin-top: 20px;
+    margin-left: -38px;
+}
+ol.questions li {
+    margin-left: 0;
+}
+
+ul.answers {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul.responses li {
+    margin: 78px 20px 20px;
+}
+ul.responses li p span {
+    display: block;
+    /*font-weight: bold;
+    font-size: 18px;*/
+        font-size: 24px;
+}
+ul.responses li.correct p span {
+    color: #003975;
+}ul.responses li.incorrect p span {
+    color: #003975;
+}
+.responses {
+    float: left;
+    position: absolute;
+    bottom: 101px;
+    left: 17rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 500px;
+    height: 290px;
+    color: #000;
+    border: 4px solid #1ca089;
+    z-index: 5;
+}
+.marging-left{margin-left: -40px;}
+.quizResults h3 {
+    margin: 0;
+	text-align:center;
+}
+.quizResults h3 span {
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+.quizResultsCopy {
+    clear: both;
+    margin-top: 20px;
+		padding-left: 211px;
+    padding-top: 149px;
+}
+.quizName{    float: left;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+	left:33px;
+    color: #1B75BB; font-size: 22px;}
+
+input[type="radio"] {
+    display:inline-block;
+        width: 50px;
+    height: 50px;
+    margin:2px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    background: #1ca089;
+}
+input[type="checkbox"] {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:2px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+}
+ol.questions li label{margin-top: 3px;
+    position: absolute;}
+@media screen and (max-width:1024px)
+{
+    .responses {
+    float: left;
+    position: absolute;
+    bottom: 101px;
+    left: 17rem;
+    }
+   .quizResults {
+        float: none;
+    position: relative;
+    left: -5rem;
+    top: 1rem;
+}
+}

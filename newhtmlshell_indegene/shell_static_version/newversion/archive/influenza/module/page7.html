@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Page 1</title>
+	<script>
+			$(document).ready(function() {
+				$('#audio-slideshow').udSynch();
+			     $(".nextFrame").text("Click/Tap forward arrow to continue");
+                  $(".disable_block").hide();
+                $(".timeline-disable").hide();
+			});
+		</script>
+		<style type="text/css">
+    .information-text {
+    position: absolute;
+   
+}
+    </style>
+	
+
+</head>
+
+<body>
+    <p class="white-text information-text block">Let’s briefly recapitulate the functions of the structures forming the upper airway, click/tap the corresponding hotspot.</p>
+<div id="slider-one_page2 animated fadeInRight" data-slide-time="0" >
+
+	<div class="image_box1 animated fadeInRight">
+		<img src="images/f7/image_f7.png" />
+	</div>
+	<div id="hot_spot1" class="click_fn magictime puffIn"><img src="images/f7/plus.png"></div>
+	<div id="hot_spot2" class="click_fn magictime puffIn"><img src="images/f7/plus.png"></div>
+	<div id="hot_spot3" class="click_fn magictime puffIn"><img src="images/f7/plus.png"></div>
+	<div id="hot_spot4" class="click_fn magictime puffIn"><img src="images/f7/plus.png"></div>
+	<div id="hot_spot5" class="click_fn magictime puffIn"><img src="images/f7/plus.png"></div>
+<!--<div class="bg_f7"></div>-->
+	<!--hot_1-->
+	<div id="hot_spot_cont1" class="hot_spot_cont animated swap ">
+		<div class="left_img_f7">
+			<!--<img src="images/f7/left_img1.png" width="146" height="176">-->
+		</div>
+		<div class="right_txt_f7 ">
+			<span style="color:#fff;"><b>Paranasal Sinuses</b></span>
+			<ul class="bulletlist"><li class="col s12 list-bullet-preicon animated fadeIn">Warm and moisten (conditions) inhaled air</li>
+			<li class="col s12 list-bullet-preicon animated fadeIn">Act as resonating chamber for speech</li></ul>
+		</div>
+		<div class="close_f7">
+			<img src="images/f7/img_f7_close.png">
+		</div>
+	</div>
+	<!--hot_1 ends-->
+	
+	<!--hot_2-->
+	<div id="hot_spot_cont2" class="hot_spot_cont animated swap">
+		<div class="left_img_f7">
+			<!--<img src="images/f7/left_img1.png" width="146" height="176">-->
+		</div>
+		<div class="right_txt_f7">
+		<span style="color:#fff;"><b>Nasal Cavity</b></span><br>
+			<ul class="bulletlist"><li class="col s12 list-bullet-preicon animated fadeIn">Warms and moistens (conditions) inhaled air</li>
+			<li class="col s12 list-bullet-preicon animated fadeIn">Mucus and vibrissae filter air </li>
+			<li class="col s12 list-bullet-preicon animated fadeIn">Acts as resonating chamber for speech</li></ul>
+		</div>
+		<div class="close_f7">
+			<img src="images/f7/img_f7_close.png">
+		</div>
+	</div>
+	<!--hot_2ends-->
+	
+	<!--hot_3-->
+	<div id="hot_spot_cont3" class="hot_spot_cont animated swap">
+		<div class="left_img_f7">
+			<!--<img src="images/f7/left_img1.png" width="146" height="176">-->
+		</div>
+		<div class="right_txt_f7">
+			<span style="color:#fff;"><b>Olfactory Epithelium</b></span><br>
+			<ul class="bulletlist"><li class="col s12 list-bullet-preicon animated fadeIn">Olfaction</li>
+			<li class="col s12 list-bullet-preicon animated fadeIn">Act as resonating chamber for speech</li></ul>
+		</div>
+		<div class="close_f7">
+			<img src="images/f7/img_f7_close.png">
+		</div>
+	</div>
+	<!--hot_3 ends-->
+	
+	<!--hot_4-->
+	<div id="hot_spot_cont4" class="hot_spot_cont animated swap">
+		<div class="left_img_f7">
+			<!--<img src="images/f7/left_img1.png" width="146" height="176">-->
+		</div>
+		<div class="right_txt_f7">
+			<span style="color:#fff;"><b>Pharynx</b></span><br>
+			<ul class="bulletlist"><li class="col s12 list-bullet-preicon animated fadeIn">Passageway for air and food</li></ul>
+		</div>
+		<div class="close_f7">
+			<img src="images/f7/img_f7_close.png">
+		</div>
+	</div>
+		<!--hot_4_end-->
+
+	<!--hot_5-->
+	<div id="hot_spot_cont5" class="hot_spot_cont animated swap">
+		<div class="left_img_f7">
+			<!--<img src="images/f7/left_img1.png" width="146" height="176">-->
+		</div>
+		<div class="right_txt_f7">
+			<span style="color:#fff;"><b>Tonsils</b></span>
+			<ul class="bulletlist"><li class="col s12 list-bullet-preicon animated fadeIn">Protect against pathogens and inhaled antigens</li></ul>
+		</div>
+		<div class="close_f7">
+			<img src="images/f7/img_f7_close.png">
+		</div>
+	</div>
+	<!--hot_5_end-->
+</div>
+<link rel="stylesheet" type="text/css" href="css/page7.css" />
+</body>
+<script>
+	var currIndex =0;
+	$(document).ready(function(){
+        $(".nextFrame").empty();
+		$('.click_fn').fadeIn();
+    
+	});
+	
+	
+	$('.close_f7').bind("click",function(){
+		$('.hot_spot_cont').fadeOut("slow");
+	});
+	$('.click_fn').bind("click",function(){
+        // e.preventDefault();
+    $(this).addClass('clicked');
+    if ($('.clicked').length === $('.click_fn').length) {
+        //$('.submit').show();
+        $(".nextFrame").text("Click/Tap forward arrow to continue");
+    }
+		$( "#hot_spot_cont"+(currIndex)+" p").fadeOut();
+		var count=1;
+		currIndex = $(this).index();
+		$(".hot_spot_cont").fadeOut();
+		$('#hot_spot_cont'+(currIndex)).fadeIn();
+		var timedelay=2000;
+		var sec=0;
+		for(var i=1;i<=$("#hot_spot_cont"+(currIndex)+" p").length;i++){
+			sec=timedelay*count;
+			$( "#hot_spot_cont"+(currIndex)+" #animation"+i).delay(sec).css({'margin-left':'20px','opacity':'0'}).show().animate({'margin-left':0,opacity:1});
+			count++;
+		}	
+	});
+	
+</script>
+</html>

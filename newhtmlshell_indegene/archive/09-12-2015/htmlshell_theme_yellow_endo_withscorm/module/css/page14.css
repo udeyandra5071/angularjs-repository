@@ -1,0 +1,18 @@
+.adjustpading{    padding-top: 24px !important;}
+.paragraph_and_image{position: absolute;
+    float: left;
+    right: 12px;
+    width: 1024px;
+    top: 7px;
+    height: 543px;}
+.bullet-title {
+    float: left;
+    position: relative;
+    width: 100%;
+    color: #000;
+    padding-left: 10px;
+}
+ .image1{    left: 62px;} 
+    .image2{        left: 335px;}  
+     .image3{     left: 626px;  
+     

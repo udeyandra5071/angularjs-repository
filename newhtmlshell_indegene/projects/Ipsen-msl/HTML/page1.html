@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome Page</title>
+<head>    
+<script>
+    $(document).ready(function(){
+        $('#audio-slideshow').udSynch();
+		 $(".nextFrame").text("Click/Tap forward arrow to continue");
+          $(".nextFrame").addClass("hide");
+        $("#canvas4").hide();
+    });
+    </script>
+    <style type="text/css">
+        .circles{float: left; position: absolute; width: 60px; height: 60px; border-radius: 50%; }
+        .lines{float: left; position: absolute; width: 275px; height: 1px;  border: 2px dashed #000;}
+        .circle1{    top: 6rem;
+    left: 6rem;}
+        .line1{top: 7.9rem;
+    left: 9.8rem;
+}
+        .top-image{    float: left;
+    position: relative;
+    left: 13rem;
+    top: 3px;
+    width: 150px;}
+    </style>
+     
+</head>
+<body>
+<div class="row">
+<div class="col s12 framebg">
+<div class="circles circle1 white">
+    
+    </div>
+<div class="lines line1"></div>
+    <div class="top-image">
+    <img src="images/f1/lo1.png" />
+    </div>
+</div> 
+
+</div> 
+</body>
+</html>

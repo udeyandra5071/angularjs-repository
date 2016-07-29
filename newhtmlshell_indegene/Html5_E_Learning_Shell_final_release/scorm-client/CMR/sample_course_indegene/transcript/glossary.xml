@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<glossary>
+  <glossaryid id="1">
+   <title><![CDATA[Lorem1]]></title>
+   <paragraph><![CDATA[Lorem ipsum dolor sit amet, vix ad soleat numquam dolorem.<sup>18</sup>]]></paragraph>
+  </glossaryid>
+  <glossaryid id="2">
+    <title><![CDATA[Lorem2]]></title>
+   <paragraph><![CDATA[Lorem ipsum dolor sit amet, vix ad soleat numquam dolorem.<sup>18</sup>]]></paragraph>
+  </glossaryid>
+ <glossaryid id="3">
+   <title><![CDATA[Lorem3]]></title>
+   <paragraph><![CDATA[Lorem ipsum dolor sit amet, vix ad soleat numquam dolorem.<sup>19</sup>]]></paragraph>
+  </glossaryid>
+   <glossaryid id="4">
+   <title><![CDATA[Lorem4]]></title>
+   <paragraph><![CDATA[Lorem ipsum dolor sit amet, vix ad soleat numquam dolorem.<sup>18</sup>]]></paragraph>
+  </glossaryid>
+   <glossaryid id="5">
+   <title><![CDATA[Lorem5]]></title>
+   <paragraph><![CDATA[Lorem ipsum dolor sit amet, vix ad soleat numquam dolorem.<sup>18</sup>]]></paragraph>
+  </glossaryid>
+   <glossaryid id="6">
+   <title><![CDATA[Lorem6]]></title>
+   <paragraph><![CDATA[Lorem ipsum dolor sit amet, vix ad soleat numquam dolorem.<sup>18</sup>]]></paragraph>
+  </glossaryid>
+   <glossaryid id="7">
+   <title><![CDATA[Lorem7]]></title>
+   <paragraph><![CDATA[Lorem ipsum dolor sit amet, vix ad soleat numquam dolorem.<sup>19</sup>]]></paragraph>
+  </glossaryid>
+</glossary>

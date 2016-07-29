@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome Page</title>
+<head>
+<link rel="stylesheet" type="text/css" href="css/page3.css" />
+<script>
+    $(document).ready(function(){
+        $('#audio-slideshow').udSynch();
+        //$(".jp-previous").prop("disabled",true);
+        //$(".jp-previous").removeClass("light-green");
+        //$(".jp-previous").addClass("grey");
+        $(".nextFrame").text("Click/Tap forward arrow to continue");
+        $(".disable_block").hide();
+        $(".timeline-disable").hide();
+        $(".audio-play_1").removeClass("disable-play-icon");
+        $(".audio-pause").removeClass("disable-pause-icon");
+        $(".replay-audio").removeClass("disable-replay-icon");
+        $(".jp-mute").removeClass("disable-mute-icon");
+	    $(".jp-next").prop("disabled",false);
+		//$(".jp-next").addClass("light-green");
+		//  $(".jp-next").removeClass("grey");
+		$(".nextFrame").removeClass("hide");
+    });
+    </script>
+</head>
+<body>
+<div class="row">
+  <div class="col s12">
+    <div class="page_box2">
+      <div class="learning-objective">
+        <div class="audio-slides">
+          <div class="animated fadeIn box-title" data-slide-time="0">Abdominal Postsurgical Adhesions</div>
+          <div class="bullet-background-image animated fadeInRight bullet1" data-slide-time="6">Incidence rate: 67% to 93%</div>
+          <div class="bullet-background-image animated fadeInRight bullet2" data-slide-time="10">Results of a 10-year follow-up study conducted in 12,584 patients who underwent lower abdominal surgery</div>
+          <div class="bullet-background-image animated fadeInRight bullet2 sub-bullet-left" data-slide-time="17">7.3% of all readmissions were directly related to adhesions </div>
+          <div class="bullet-background-image animated fadeInRight bullet2 sub-bullet-left" data-slide-time="24">25.4% of readmissions were due to a potential adhesion-related disorder during the first postoperative year </div>
+        </div>
+        <div class="audio-slides">
+          <div class="animated fadeIn box-title" data-slide-time="33">Incidence in Pelvic Procedures</div>
+          <div class="bullet-background-image animated fadeInRight bullet1" data-slide-time="37">Incidence of intraperitoneal postsurgical adhesions following pelvic surgery in women has been reported to be between 55% and 100%</div>
+          <div class="bullet-background-image animated fadeInRight bullet2" data-slide-time="47">Most common site of adhesion formation is the ovaries</div>
+          <div class="bullet-background-image animated fadeInRight bullet2" data-slide-time="59">About 20% of the patients are readmitted within 1 year for an additional open gynecologic procedure complicated by adhesions </div>
+          <div class="bullet-background-image animated fadeInRight bullet2" data-slide-time="72">Presence and severity of adhesions increase with each subsequent cesarean delivery </div>
+          <div class="bullet-background-image animated fadeInRight bullet2" data-slide-time="78">The efficacy and safety of Seprafilm®, in relation to reduction of adhesion in cesarean section, has not been confirmed in well-controlled clinical trials </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

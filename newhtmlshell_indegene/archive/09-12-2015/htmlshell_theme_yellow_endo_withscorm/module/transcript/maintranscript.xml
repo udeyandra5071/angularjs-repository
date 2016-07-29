@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<framenumbers count="3">
+<frame id="1">
+<framename><![CDATA[Chapter 1]]></framename>
+<sectionname><![CDATA[Introduction]]></sectionname>
+<audiotranscript><![CDATA[<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+<frame id="2">
+<framename><![CDATA[Chapter 2]]></framename>
+<sectionname><![CDATA[Neuroendocrine]]></sectionname>
+<audiotranscript><![CDATA[<p>Neuroendocrine neoplasms (NENs) are tumours that originate from neuroendocrine cells located in various parts of the body.1 They are a diverse group of malignant tumours with some common features; however, not all exhibit hypersecretion of peptide hormones and related symptoms.<sup>1</sup> They specifically express the neuroendocrine markers in the tumour cells. NENs comprise low-, intermediate- and high-grade tumours.<sup>2</sup> </p><p>According to the ENETS 2011 guidelines, the low- to intermediate-grade neoplasms are defined as NETs that were previously classified as carcinoid or atypical carcinoid. Atypical carcinoid is an intermediate form of NET varying between typical carcinoid (low-grade) and small cell carcinoma (high-grade). The high-grade tumours are defined as neuroendocrine carcinoma (NEC), which was previously known as poorly differentiated carcinoma.<sup>2</sup></p>]]></audiotranscript>
+<information><![CDATA[<p>NETs are complex and heterogeneous in nature, originating most commonly from the GEP tract and from the pulmonary system.3, 4 Approximately 60% of NETs are localised within the GEP tract, and the remaining are located mainly in the lungs (25% of NETs) and in the thymus as well as in the parathyroid, adrenal and pituitary glands.<sup>3, 5</sup> 
+</p>]]></information>
+</frame>
+<frame id="3">
+<framename><![CDATA[Chapter 3]]></framename>
+<sectionname><![CDATA[Tabs]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 3 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+<frame id="4">
+<framename><![CDATA[Chapter 4]]></framename>
+<sectionname><![CDATA[Tabs feature V2]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 4 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+<frame id="5">
+<framename><![CDATA[Chapter 5]]></framename>
+<sectionname><![CDATA[Tabs feature V3]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 5 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+<frame id="6">
+<framename><![CDATA[Chapter 6]]></framename>
+<sectionname><![CDATA[Hotspot feature]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 6 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+<frame id="7">
+<framename><![CDATA[Chapter 7]]></framename>
+<sectionname><![CDATA[Card Reveal feature]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 7 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+<frame id="8">
+<framename><![CDATA[Chapter 8]]></framename>
+<sectionname><![CDATA[Drag and Drop]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 8 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+    <frame id="9">
+<framename><![CDATA[Chapter 9]]></framename>
+<sectionname><![CDATA[Learning Activity]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 9 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+    <frame id="10">
+<framename><![CDATA[Chapter 10]]></framename>
+<sectionname><![CDATA[Card Reveal feature]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 10 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+    <frame id="11">
+<framename><![CDATA[Chapter 11]]></framename>
+<sectionname><![CDATA[Card Reveal feature]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 11 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+        <frame id="12">
+<framename><![CDATA[Chapter 12]]></framename>
+<sectionname><![CDATA[Video Play]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 11 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+           <frame id="13">
+<framename><![CDATA[Chapter 13]]></framename>
+<sectionname><![CDATA[Video Play]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 11 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+    <frame id="14">
+<framename><![CDATA[Chapter 14]]></framename>
+<sectionname><![CDATA[Video Play]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 11 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+     <frame id="15">
+<framename><![CDATA[Chapter 15]]></framename>
+<sectionname><![CDATA[Video Play]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 11 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+         <frame id="16">
+<framename><![CDATA[Chapter 16]]></framename>
+<sectionname><![CDATA[Video Play]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 11 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+             <frame id="17">
+<framename><![CDATA[Chapter 17]]></framename>
+<sectionname><![CDATA[Video Play]]></sectionname>
+<audiotranscript><![CDATA[<p>Hello</p><ul><li>Hi Dummy text 11 </li></ul>]]></audiotranscript>
+<information><![CDATA[]]></information>
+</frame>
+</framenumbers>

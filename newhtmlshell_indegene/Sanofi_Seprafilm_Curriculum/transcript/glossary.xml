@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<glossary>
+  <glossaryid id="1">
+   <title><![CDATA[ANTIGEN]]></title>
+   <paragraph><![CDATA[Any entity that is capable of triggering an immune response.<sup>18</sup>]]></paragraph>
+  </glossaryid>
+  <glossaryid id="2">
+    <title><![CDATA[ARTHRALGIA]]></title>
+   <paragraph><![CDATA[Pain in the joints.<sup>18</sup>]]></paragraph>
+  </glossaryid>
+ <glossaryid id="3">
+   <title><![CDATA[EXCIPIENTS]]></title>
+   <paragraph><![CDATA[Substances added to a medicine for ease of proper shaping and consistency; the vehicle for the drug.<sup>19</sup>]]></paragraph>
+  </glossaryid>
+   <glossaryid id="4">
+   <title><![CDATA[MALAISE]]></title>
+   <paragraph><![CDATA[Feeling of discomfort, weakness or fatigue.<sup>18</sup>]]></paragraph>
+  </glossaryid>
+   <glossaryid id="5">
+   <title><![CDATA[MYALGIA]]></title>
+   <paragraph><![CDATA[Muscular pain.<sup>18</sup>]]></paragraph>
+  </glossaryid>
+   <glossaryid id="6">
+   <title><![CDATA[PROPHYLAXIS]]></title>
+   <paragraph><![CDATA[Prevention of a disease or of a process that can lead to disease.<sup>18</sup>]]></paragraph>
+  </glossaryid>
+   <glossaryid id="7">
+   <title><![CDATA[REYE’S SYNDROME]]></title>
+   <paragraph><![CDATA[Syndrome characterised by acute encephalopathy and fatty infiltration of the liver, pancreas, heart, spleen and lymph nodes. It occurs in children aged <19 years following an acute viral infection. Generally associated with the increased use of salicylates (aspirin) in children during or following viral infection.<sup>19</sup>]]></paragraph>
+  </glossaryid>
+</glossary>

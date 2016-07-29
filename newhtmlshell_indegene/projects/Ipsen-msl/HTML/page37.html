@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome Page</title>
+<head>
+<script>
+    $(document).ready(function(){
+        $('#audio-slideshow').udSynch();
+         $(".nextFrame").text("Click/Tap forward arrow to continue");
+          $(".nextFrame").removeClass("hide");
+        $("#canvas4").hide();
+    });
+    </script>
+    <style type="text/css">
+
+    
+       .character {
+  float: left;
+    position: relative;
+    top: 0px;
+    height: 370px;
+    margin: 20px;
+    width: 278px !important;
+    left: 64px;
+   -webkit-box-shadow: 0px 0px 2px 0px rgba(51,49,51,1); 
+    -moz-box-shadow: 0px 0px 2px 0px rgba(51,49,51,1);
+     box-shadow: 0px 0px 2px 0px rgba(51,49,51,1); 
+    border-radius: 5px;
+    -ms-border-radius: 5px;
+}
+        .character img{    float: left !important;
+    position: relative !important;left: 61px !important;
+}
+        .character-block{    float: left;
+    width: 100%;
+    position: relative;
+    height: 185px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+}
+        .background2{    background: #49b3a1;
+    border: 4px solid #1ca089;}
+        .padding-0{padding: 0px !important;}
+        .Personname{float: left; position: relative;}
+        .Personname h3{background: #1ca089;
+    padding: 12px;
+    margin-top: -1px; font-weight: bold;}
+ .Personname p {
+    font-size: 16px;
+    padding-left: 9px;
+    padding-right: 9px;
+    font-family: 'Helvetica';
+    color: #fff;
+    margin-top: -6px;
+}
+        .color{color: #003975;}
+        .top1{top: 26px !important;}
+        .top2{top: 20px !important;}
+        .top3{top: 18px !important;}
+    </style>
+</head>
+<body>
+    
+<div class="row">
+    <div class="col s12 framebg">
+    <div class="audio-slides">
+        <h3 class="color animated fadeIn" data-slide-time="0">Characters for Scenario1</h3>
+        <div class="col s4 animated fadeInDown character background2 padding-0" data-slide-time="1">
+        <div class="center-align white character-block">
+            <img class="top1" src="images/f37/character1.png" />
+            </div>
+            <div class="Personname center white-text">
+            <h3>James</h3>
+                <p>James has been working as an MSL within the Ipsen Medical Affairs Team. For the past 2 years he has been in charge of the neurological disease area.</p>
+            </div>
+        </div>
+        <div class="col s4 animated fadeInDown character background2 padding-0" data-slide-time="3">
+             <div class="center-align white character-block">
+        <img class="top2" src="images/f37/character2.png" />
+            </div>
+              <div class="Personname center white-text">
+            <h3>Prof Reynolds</h3>
+                <p>Prof Reynolds is the head of the Neurology Department at a reputed multi-speciality hospital.</p>
+            </div>
+        </div>
+        <div class="col s4 animated fadeInDown character background2 padding-0" data-slide-time="5">
+             <div class="center-align white character-block">
+        <img class="top3" src="images/f37/character3.png" />
+            </div>
+              <div class="Personname center white-text">
+            <h3>Sam</h3>
+                <p>Sam is a sales rep who has recently joined the Ipsen Marketing team.</p>
+            </div>
+        </div>
+        </div>
+        
+    </div>
+    
+</div> 
+</body>
+</html>

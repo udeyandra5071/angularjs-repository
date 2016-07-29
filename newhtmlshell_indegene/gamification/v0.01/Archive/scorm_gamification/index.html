@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Scorm Work    
+</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/scorm-api.js"></script>
+<script>
+    // Never delete below code//
+ var scorm = pipwerks.SCORM;
+
+
+function init(){
+	
+	//Specify SCORM 1.2:
+	scorm.version = "1.2";
+	
+	show("Initializing course.");
+	
+	var callSucceeded = scorm.init();
+	
+	show("Call succeeded? " +callSucceeded);
+	show("<hr>");
+
+}
+$(document).ready(function(){
+    var count=0;
+    $(".send_suspend_data").bind("click",function(){
+        count++;
+        alert(1);
+        set('cmi.suspend_data', count);
+    });
+});    
+</script>
+</head>
+<body>
+<a href="#" class="send_suspend_data">Click here</a>
+    
+</body>
+</html>

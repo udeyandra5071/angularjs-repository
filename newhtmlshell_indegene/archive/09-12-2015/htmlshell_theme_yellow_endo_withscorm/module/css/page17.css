@@ -1,0 +1,195 @@
+#canvas17{display:none;}
+#loadanim{float:none; margin:0px auto; width:100%; position:relative;}
+iframe{    float: none;
+    /* margin: 0px auto; */
+    width: 550px;
+    height: 550px;
+    position: absolute;
+        right: 32%;
+    top: 52px;}
+#arrow1{    position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+    top: 30px;
+    left: 4px;}
+#text1{float: none;
+    position: relative;
+    width: 55%;
+    margin: 0px auto;
+    text-align: right;
+    font-weight: bold;
+    top: 7px;}
+
+#text2{    float: none;
+    position: relative;
+    width: 35%;
+    margin: 0px auto;
+    text-align: left;
+    top: -15px;
+}
+	#text2 img{     float: left;
+    position: relative;
+    left: 130px;
+    top: 3px;}
+	#text3{float: none;
+    position: relative;
+    width: 55%;
+    margin: 0px auto;
+    text-align: right;
+    font-weight: bold;
+    top: 65px;
+    padding-right: 11px;}
+#text4 {
+    float: none;
+    position: relative;
+    width: 31%;
+    margin: 0px auto;
+    text-align: left;
+    top: -5px;
+}
+#text4 {
+    float: none;
+    position: relative;
+    width: 31%;
+    margin: 0px auto;
+    text-align: left;
+    top: -5px;
+}
+#text4 img {
+    float: left;
+    position: relative;
+    left: 130px;
+    top: 3px;
+}
+#arrow2 {
+    position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+    top: 16px;
+    left: 86px;}
+#arrow3 {
+    position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+    top: 16px;
+    left: 86px;}
+	#text5{    float: none;
+    position: relative;
+    width: 75%;
+    margin: 0px auto;
+    text-align: right;
+    top: -15px;
+    font-weight: bold;
+}
+#text6{    float: none;
+    position: relative;
+    width: 58%;
+    margin: 0px auto;
+    text-align: left;
+    top: -24px;
+}
+#text7{float: none;
+    position: relative;
+    width: 58%;
+    margin: 0px auto;
+    text-align: left;
+    top: -528px;
+}
+#text8{    float: none;
+    position: relative;
+    width: 47%;
+    margin: 0px auto;
+    text-align: right;
+    top: -334px;
+	font-weight:bold;
+}
+#text9{    float: none;
+    position: relative;
+    width: 43%;
+    margin: 0px auto;
+    text-align: left;
+    top: -352px;
+    /* font-weight: bold; */
+}
+#text9 img{    float: left;
+    position: relative;
+    left: 176px;
+    top: 3px;}
+#arrow4 {
+        position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+    top: -108px;
+    left: -61px;}
+	#arrow5 {
+           position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+    top: -211px;
+    left: -169px;}
+		#arrow6 {
+               position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+    top: -381px;
+    left: -169px;}
+		#arrow7 {
+               position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+       top: -459px;
+    left: -77px;}
+		#arrow8 {
+     position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+       top: -396px;
+    left: 45px;}
+		#arrow9 {
+     position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+    top: -490px;
+    left: -32px;}
+		#arrow10{
+     position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+      top: -595px;
+        left: -93px;}
+		#arrow11 {
+     position: relative;
+    float: none;
+    width: 0%;
+    height: 90px;
+    margin: 0px auto;
+        top: -690px;
+    left: 82px;}
+.animation-title{float: none;
+    position: relative;
+    width: 65%;
+    margin: 0px auto;
+    text-align: center;
+    top: 516px;
+    left: 21px;
+}

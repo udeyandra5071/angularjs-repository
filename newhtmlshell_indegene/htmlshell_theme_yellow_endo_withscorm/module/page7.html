@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Page 1</title>
+	
+		
+<link href="css/page8.css" rel="stylesheet">
+<!--<link rel="stylesheet" type="text/css" href="css/animate.css" />-->
+</head>
+
+<body>
+<div id="slide1">
+  <div class="f9_img_bg">
+	<div class="title_card">
+		<div class="title_text" >
+			<h1>Neque porro quisquam est qui dolorem ipsum</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+ad minim ven iam, quis nostrud exercitation ullamco laboris</p>
+		</div>
+		<div class="know_more_btn ">
+			<div class="knw_btn"><img src="images/f8/know_more.png" width="39" height="39"></div>
+			<div class="knw_btn_img">Know more</div>
+		</div>
+	</div>
+
+  </div>
+  	<div class="knw_mr_det animated fadeInUp">
+		<h1>Neque porro quisquam est qui dolorem ipsum</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven iam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commo do consequat. Duis aute irure
+dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+eu fugiat nulla pariatur.
+
+	velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation </p>
+<div class="f9_close"><img src="images/f8/img_f9_close.png" width="20" height="20"></div>
+	</div>
+</div>
+
+</body>
+<script>
+	var currIndex =0;
+	$(document).ready(function(){
+		
+		$(".nis_frame_emod").show();
+	});
+	$('.know_more_btn').bind("click",function(){
+		$('.title_card').hide();
+		//$('.knw_mr_det').css({'margin-bottom':'400px','opacity':'0'}).show().animate({'margin-bottom':0,opacity:'1'});
+		$('.knw_mr_det').show();
+	
+	});
+	$('.f9_close').bind("click",function(){
+	$('.title_card').show();
+	$('.knw_mr_det').hide();
+	});
+	
+	
+	
+</script>
+</html>

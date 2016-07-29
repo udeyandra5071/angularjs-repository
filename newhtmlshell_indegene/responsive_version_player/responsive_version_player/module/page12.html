@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>Drag and drop quiz</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+ <link href="css/filluptheblankquiz.css" media="all" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/page12.css" /> 
+
+ <script type="text/javascript" src="js/filluptheblankquiz.js"></script> 
+
+        <script type="text/javascript"> 
+         
+            $(document).ready(function(){
+               
+                  $(".jp-next").prop("disabled",false);
+                   // $(".jp-next").removeClass("grey");
+                      //  $(".jp-next").addClass("light-green");
+                   $('.quiz').dragBlankQuiz(); 
+             
+                
+            });
+         
+        </script> 
+		
+    </head> 
+    <body> 
+	<div class="col s12 iblue heading1">
+			<p class="fr12_heading"><b>Fill the blanks with the most appropriate options from the drop-down list.</b></p>
+			</div>
+     
+        <div class="quiz" data-fake-answers='[]'>
+
+            <ol class="qs">
+                <li>Immunisation by Fluenz Tetra is carried out by <span class="quiz-answer">Nasal route</span>.</li>
+				<li>Fluarix is administered by <span class="quiz-answer">Intramuscular or deep subcutaneous injection</span>.</li>
+				<li>Immunisation by Enzira should be carried out by <span class="quiz-answer">Intramuscular or deep subcutaneous injection</span>.</li>
+				<li>INTANZA is administered by <span class="quiz-answer">Intradermal route</span>.</li>
+            </ol>
+            
+        </div>
+
+
+       <!-- <div class="quiz" 
+            data-fake-answers='[]'>
+
+            <div class="qp">
+                <ol><li>Immunisation by Fluenz Tetra is carried out by <span class="quiz-answer">Nasal route</span>.</li>
+				<li>Fluarix is administered by <span class="quiz-answer">Intramuscular or deep subcutaneous injection</span>.</li>
+				<li>INTANZA is administered by <span class="quiz-answer">Intradermal route</span>.</li>
+               </ol>
+            </div>
+
+        </div>-->
+
+     
+</body>
+</html>
+

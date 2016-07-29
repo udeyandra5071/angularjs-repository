@@ -1,0 +1,219 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+Title
+</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="jquery.ui.touch-punch.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/dragndrop.css" />
+<link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+  </style>
+  <script>
+     //var topicName = ["jen","bob","michelle"];  
+  $(function() {
+       var parent1 = $(".questions");
+                var divs_1 = parent1.children();
+                    while (divs_1.length) {
+                        parent1.append(divs_1.splice(Math.floor(Math.random() * divs_1.length), 1)[0]);
+                    }
+          var parent2 = $(".choices");
+                var divs_2 = parent2.children();
+                    while (divs_2.length) {
+                        parent2.append(divs_2.splice(Math.floor(Math.random() * divs_2.length), 1)[0]);
+                    }
+          
+    $( ".draggable1" ).draggable({
+        revert: true,
+        revertDuration: 200});
+      $( ".draggable2" ).draggable({
+        revert: true,
+        revertDuration: 200});
+       $( ".draggable3" ).draggable({
+        revert: true,
+        revertDuration: 200});
+        $( ".draggable4" ).draggable({
+        revert: true,
+        revertDuration: 200});
+    $( ".droppable1" ).droppable({
+        activeClass: "ui-state-highlight",
+      drop: function( event, ui ) {
+  
+            var $item = ui.draggable.clone();
+           $(this).addClass('has-drop').html($item);
+           $(".question").css({"left":"0px","top":"0px"});
+           ui.draggable.remove();
+             $('#collapse tr').not(":first-child").hide();
+           $(this).droppable('disable');
+           /* $("#hello").bind("click",function(){
+                $("div.choice .question .box > div").each(function(){
+                    var nameFound = $.inArray($(this).text(), topicName);
+                        if (nameFound === -1){
+                            $(this).css({"color":"red"});
+                        } else {
+                                $(this).css({"color":"green"});
+                                }
+  
+                    });
+                });  */
+            }
+   
+       
+        });
+        $( ".droppable2" ).droppable({
+        activeClass: "ui-state-highlight",
+      drop: function( event, ui ) {
+  
+            var $item = ui.draggable.clone();
+           $(this).addClass('has-drop').html($item);
+           $(".question").css({"left":"0px","top":"0px"});
+           ui.draggable.remove();
+             $('#collapse tr').not(":first-child").hide();
+           $(this).droppable('disable');
+           /* $("#hello").bind("click",function(){
+                $("div.choice .question .box > div").each(function(){
+                    var nameFound = $.inArray($(this).text(), topicName);
+                        if (nameFound === -1){
+                            $(this).css({"color":"red"});
+                        } else {
+                                $(this).css({"color":"green"});
+                                }
+  
+                    });
+                });  */
+            }
+   
+       
+        });
+        $( ".droppable3" ).droppable({
+        activeClass: "ui-state-highlight",
+      drop: function( event, ui ) {
+  
+            var $item = ui.draggable.clone();
+           $(this).addClass('has-drop').html($item);
+           $(".question").css({"left":"0px","top":"0px"});
+           ui.draggable.remove();
+             $('#collapse tr').not(":first-child").hide();
+           $(this).droppable('disable');
+           /* $("#hello").bind("click",function(){
+                $("div.choice .question .box > div").each(function(){
+                    var nameFound = $.inArray($(this).text(), topicName);
+                        if (nameFound === -1){
+                            $(this).css({"color":"red"});
+                        } else {
+                                $(this).css({"color":"green"});
+                                }
+  
+                    });
+                });  */
+            }
+   
+       
+        });
+        $( ".droppable4" ).droppable({
+        activeClass: "ui-state-highlight",
+      drop: function( event, ui ) {
+  
+            var $item = ui.draggable.clone();
+           $(this).addClass('has-drop').html($item);
+           $(".question").css({"left":"0px","top":"0px"});
+           ui.draggable.remove();
+             $('#collapse tr').not(":first-child").hide();
+           $(this).droppable('disable');
+           /* $("#hello").bind("click",function(){
+                $("div.choice .question .box > div").each(function(){
+                    var nameFound = $.inArray($(this).text(), topicName);
+                        if (nameFound === -1){
+                            $(this).css({"color":"red"});
+                        } else {
+                                $(this).css({"color":"green"});
+                                }
+  
+                    });
+                });  */
+            }
+   
+       
+        });
+          $(".tab").bind("click",function(){
+           if($(".draggable1").attr("myValue1") == $(".droppable1").attr("myValue1"))
+             {
+                  
+                 alert("OK");
+                  $(".choice > div").addClass("correctActive");
+              
+             }
+          else if($(".draggable1").attr("myValue1") != $(".droppable1").attr("myValue1"))
+              {
+                 alert("Not OK");
+                  $(".choice > div").addClass("wrongActive"); 
+              }
+          
+            
+            
+         
+                 });
+    });
+  </script>
+  
+</head>
+<body>
+    <div id="quiz">
+     <div class="question-blocks">
+     
+         
+        
+    </div>
+        <div class="questions">
+<div  class="question draggable1 ui-widget-content answer-1" myValue1="question1">
+  <div class="box"><div>jen</div></div>
+</div>
+ <div  class="question draggable2 ui-widget-content answer-2" myValue2="question2">
+    <div class="box"><div>bob</div> </div>
+</div>
+        <div  class="question draggable3 ui-widget-content answer-3" myValue3="question3">
+        <div class="box"> <div>sally</div></div>
+</div>
+                 <div  class="question draggable4 ui-widget-content answer-3" myValue4="question4">
+        <div class="box"> <div>Kally</div></div>
+</div>
+
+        </div>
+        <div class="choices">
+            <div class="question-sufffle">
+                    <div class="question-block question-block1"> simply dummy text of the printing and typesetting1.</div>
+        <div  class="choice droppable1 ui-widget-header" myValue1="question1">
+ Droppable1
+</div>
+</div>
+      <div class="question-sufffle">  
+<div class="question-block question-block2"> simply dummy text of the printing and typesetting2.</div>
+<div  class="choice  droppable2 ui-widget-header" myValue2="question2">
+ Droppable2
+</div>
+            </div>
+                <div class="question-sufffle">
+ <div class="question-block question-block3"> simply dummy text of the printing and typesetting3.<span class="answerme answer_3">Question3</span></div>
+<div  class="choice droppable3 ui-widget-header" myValue3="question3">
+ Droppable3
+</div>
+            </div> 
+                <div class="question-sufffle">
+         <div class="question-block question-block4"> simply dummy text of the printing and typesetting4.<span class="answerme answer_4">Question4</span></div>
+
+            <div  class="choice droppable4 ui-widget-header" myValue4="question4">
+ Droppable4
+</div>
+            </div>
+        </div>
+
+    <a href="#" class="tab" >Submit</a>
+    
+    </div>
+    
+</body>
+</html>

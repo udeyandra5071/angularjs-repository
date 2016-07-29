@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>frame 18</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+  <script src="jquery.ui.touch-punch.min.js"></script>
+  <script type="text/javascript" src="jquery.ui.draggable.quiz.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/dragndrop.css" />
+<script>
+    $(init);
+
+function init() {
+
+    $('#element_1').data( 'number', 1 ).attr( 'id', 'card'+1 ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+    
+        $('#element_2').data( 'number', 2 ).attr( 'id', 'card'+2 ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+    
+        $('#element_3').data( 'number', 3 ).attr( 'id', 'card'+3 ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+    
+        $('#element_2').data( 'number', 2 ).attr( 'id', 'card'+2 ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+    
+        $('#element_5').data( 'number', 5 ).attr( 'id', 'card'+5 ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+    
+        $('#element_2').data( 'number', 2 ).attr( 'id', 'card'+2 ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+    
+        $('#element_7').data( 'number', 7 ).attr( 'id', 'card'+7 ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+    
+        $('#element_2').data( 'number', 2 ).attr( 'id', 'card'+2 ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+    
+        $('#element_9').data( 'number', 9 ).attr( 'id', 'card'+9 ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+
+
+  // Create the element slots
+
+    $('#slot_1').data( 'number', 1 ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+    
+        $('#slot_2').data( 'number', 2 ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+    
+        $('#slot_3').data( 'number', 3 ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+    
+        $('#slot_2').data( 'number', 2 ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+    
+        $('#slot_5').data( 'number', 5 ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+    
+        $('#slot_2').data( 'number', 2 ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+    
+        $('#slot_7').data( 'number', 7 ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+    
+        $('#slot_2').data( 'number', 2 ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+    
+        $('#slot_9').data( 'number', 9 ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+}
+
+function handleCardDrop( event, ui ) {
+  var slotNumber = $(this).data( 'number' );
+  var cardNumber = ui.draggable.data( 'number' );
+
+  if ( slotNumber == cardNumber ) {
+      
+     
+
+
+ui.draggable.click(function(e) {  
+        window.open(ui.draggable.attr('data-link'));
+    });
+      
+      
+      
+      
+      
+    ui.draggable.addClass( 'correct' );
+    ui.draggable.draggable( 'disable' );
+    $(this).droppable( 'disable' );
+    ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+    ui.draggable.draggable( 'option', 'revert', false );
+  } 
+}
+    </script>
+    <style type="text/css">
+    @charset "utf-8";
+/* CSS Document */
+
+/* Add some margin to the page and set a default font and colour */
+
+body {
+    margin: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8em;
+    color: #333;
+}
+
+/* Give headings their own font */
+
+h1, h2, h3, h4 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* Main content area */
+
+#content {
+  margin: 80px 70px;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Header/footer boxes */
+
+.wideBox {
+  clear: both;
+  text-align: center;
+  margin: 70px;
+  padding: 10px;
+  background: #ebedf2;
+  border: 1px solid #333;
+}
+
+.wideBox h1 {
+  font-weight: bold;
+  margin: 20px;
+  color: #666;
+  font-size: 1.5em;
+}
+
+/* Slots for final card positions */
+
+#cardSlots {
+  margin: 50px auto 0 auto;
+}
+
+/* The initial pile of unsorted cards */
+
+#cardPile {
+  margin: 0 auto;
+}
+
+#cardPile {
+  width: 1200px;
+  height: 120px;
+  padding: 20px;
+}
+
+#cardSlots {
+    width: 1200px;
+    height: 1000px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+}
+
+/* Individual cards and slots */
+
+#cardSlots div, #cardPile div {
+    float: left;
+    width: 80px;
+    height: 50px;
+    padding: 10px;
+    padding-bottom: 0;
+    border: 1px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 10px;
+    background: #fff;
+}
+
+#cardSlots div:first-child, #cardPile div:first-child {
+  margin-left: 0;
+}
+
+#cardSlots div.hovered {
+  background: #aaa;
+}
+
+#cardSlots div {
+  border: 1px dashed #333;
+}
+
+.slots {
+
+}
+
+#cardPile div {
+    background: #c1ecfc;
+    border: 1px solid #005575;
+    color: #005575;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3;    
+}
+
+#cardPile div.ui-draggable-dragging {
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/* Individually coloured cards */
+
+#card1.correct { background: #0CF; color: #fff;}
+#card2.correct { background: #09F; color: #fff;}
+#card3.correct { background: #06F; color: #fff;}
+#card4.correct { background: #03F; color: #fff;}
+#card5.correct { background: #00F; color: #fff;}
+#card6.correct { background: #30F; color: #fff;}
+#card7.correct { background: #33F; color: #fff;}
+#card8.correct { background: #36F; color: #fff;}
+#card9.correct { background: #39F; color: #fff;}
+#card10.correct { background: #3CF; color: #fff;}
+
+
+    </style>
+</head>
+
+<body>
+<div id="content">
+  <div id="cardPile"> 
+  <div id="element_3" data-link="element_3.html">Harvest Cells for Virus stock generation</div>
+  <div id="element_2" data-link="element_1.html">Maintain Cell Line</div>
+  <div id="element_9" data-name="9" data-link="element_9.html">Freeze Cell Line for long term storage</div>
+  <div id="element_2" data-name="2" data-link="element_2.html">Maintain Cell Line</div>
+  <div id="element_5" data-name="5" data-link="element_5.html">Harvest Cells for TCID50</div>
+  <div id="element_2" data-name="2" data-link="element_2.html">Maintain Cell Line</div>
+  <div id="element_7" data-name="7" data-link="element_7.html">Harvest Cells for Microneut</div>
+  <div id="element_1" data-name="1" data-link="element_1.html">Establish Cell Line</div>
+  <div id="element_2" data-name="2" data-link="element_2.html">Maintain Cell Line</div> 
+  </div>
+  <div id="cardSlots"> 
+  <div id="slot_1" style="position: absolute; left: 797px; top: 223px;"></div>
+  <div id="slot_2" style="position: absolute; left: 958px; top: 281px;"></div>
+  <div id="slot_3" style="position: absolute; left: 1044px; top: 428px;"></div>
+  <div id="slot_2" style="position: absolute; left: 1015px; top: 597px;"></div>
+  <div id="slot_5" style="position: absolute; left: 884px; top: 709px;"></div>
+  <div id="slot_2" style="position: absolute; left: 712px; top: 708px;"></div>
+  <div id="slot_7" style="position: absolute; left: 580px; top: 600px;"></div>
+  <div id="slot_2" style="position: absolute; left: 550px; top: 430px;"></div>
+  <div id="slot_9" style="position: absolute; left: 637px; top: 281px;"></div> 
+  </div>
+</div>
+	
+</body>
+
+</html>

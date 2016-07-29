@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome Page</title>
+<head>
+<script>
+    $(document).ready(function(){
+        $('#audio-slideshow').udSynch();
+        $(".jp-next").prop("disabled",true);
+          $(".jp-next").removeClass("light-green");
+            $(".jp-next").addClass("grey");
+			 $(".jp-previous").prop("disabled",false);
+				$(".jp-previous").addClass("light-green");
+					$(".jp-previous").removeClass("grey");
+			
+			
+			 $(".nextFrame").text("Click/Tap forward arrow to continue");
+              $(".timeline-disable").show();
+                      $(".audio-play_1").addClass("disable-play-icon");
+        $(".audio-pause").addClass("disable-pause-icon");
+        $(".replay-audio").addClass("disable-replay-icon");
+        $(".jp-mute").addClass("disable-mute-icon");
+        
+    });
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

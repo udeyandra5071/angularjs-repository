@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <audioid id="1">
+   <audiourl></audiourl>
+   <audiotext class="1">Hello</audiotext>
+    <audiotext class="1">Hello</audiotext>
+	 <audiotext class="1">Hello</audiotext>
+	  <audiotext class="1">Hello</audiotext>
+	   <audiotext class="1">Hello</audiotext>
+  </audioid>
+  <audioid id="2">
+     <pdf>http://cdn2.hubspot.net/hub/53/blog/docs/ebooks/learning_linkedin_from_the_experts.pdf</pdf>
+	<ppt>http://cdn2.hubspot.net/hub/53/blog/docs/ebooks/learning_linkedin_from_the_experts.pdf</ppt>
+  </audioid>
+</resources>

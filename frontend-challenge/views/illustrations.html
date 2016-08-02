@@ -1,0 +1,19 @@
+<div class="col-md-12" >
+<div class="container">
+   <div class="col-md-12">
+    <h2 class="center">Illustrations <button type="button" class="btn  btn-padding" data-toggle="modal" data-target="#myModal">Hire Artist</button></h2>
+    <input type="text" ng-model="illustrationsfilter" class="form-control" placeholder="Calender" aria-describedby="basic-addon2">
+</div>
+<div class="col-md-12 padding-top-30">
+<div class="col-md-4 margin-top15" ng-repeat="illus in illustration |  filter:illustrationsfilter">
+<div class="col-md-12  padding-top-bottom box-shadow">
+<div class="col-md-12"><img class="img-responsive" ng-src="{{illus.thumbnail}}" /></div>
+<div class="col-md-12"><h4 class="center">{{illus.illtitle}}</h4></div>
+<div class="col-md-12 center">{{illus.illDescription}}</div>
+<div class="col-md-12 author right">Author: {{illus.illauthor}}</div>
+    </div>
+</div> 
+
+</div> 
+</div>
+</div>

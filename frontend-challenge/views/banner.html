@@ -1,0 +1,46 @@
+<div class="col-md-12" >
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide"  ng-repeat="banners in bannerdata">
+<figure>
+  <img width="100%" ng-src="{{banners.banner}}" />  
+<figcaption class="caption animated fadeInRight">
+    <h3>{{banners.figcaptitle}}</h3>
+    <h4>{{banners.figsubtitle}}</h4>
+    </figcaption>
+</figure>
+    
+
+</div>
+
+</div>
+ 
+<div class="swiper-pagination"></div>
+ <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+</div>
+
+   <div class="qouteinfo col-md-12">
+<div class="col-md-10">{{quotetext}} </div><div class="col-md-2"><button type="button" class="btn  btn-padding" data-toggle="modal" data-target="#myModal">Hire Artist</button>  </div>  
+</div> 
+<div class="col-md-12 middle-container padding-bottom-15">
+<div class="container">
+ <div class="col-md-3 " ng-repeat="blobe in middlecontainer">
+ <div class="col-md-12 box-shadow padding-top-bottom center" >
+<span>
+<i class="font-icon-middle-rw {{blobe.iconImage}}"></i>
+</span>
+<h4>{{blobe.title}}</h4>
+<div class="col-md-12">
+ {{blobe.paragraph}}
+</div>
+</div>   
+</div>
+      
+</div>
+
+</div> 
+
+
+</div>

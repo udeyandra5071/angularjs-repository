@@ -1,0 +1,7 @@
+#canvas{    background-image: url('../images/golf.jpg');
+    background-repeat: no-repeat;
+    position: relative;
+    width: 580px;
+    margin: 0px auto;
+    float: none;
+    display: block;}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+<script src="js/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/canvas.css" />
+
+</head>
+<body>
+<canvas width="580" height="530" id="canvas"></canvas>   
+<button class="hit">Hitme</button>
+    <script>
+    var canvas = document.getElementById("canvas"),
+    ctx = canvas.getContext("2d");
+
+canvas.width = 580;
+canvas.height = 530;
+
+
+
+var reqAnimFrame =
+    window.requestAnimationFrame || 
+    window.mozRequestAnimationFrame || 
+    window.webkitRequestAnimationFrame || 
+    window.msRequestAnimationFrame ||
+    window.oRequestAnimationFrame;
+
+
+
+var car = new Image();
+var carOne = new Image();
+car.onload = animate;
+car._x = 72;
+car._y = 66;
+car.src = "images/golf-ball.png";
+carOne.src = "images/golf-ballOne.png";
+
+var speed = 10;
+
+function animate(){
+    
+    car._y-= speed;
+
+    
+    draw();
+    
+}
+
+function draw(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(carOne, 105, car._y);
+     //ctx.drawImage(car, 105, car._y);
+    
+    
+ 
+}
+        $(document).ready(function(){
+            $(".hit").on("click",function(){
+             reqAnimFrame(animate);
+                
+            });
+            
+        });
+
+    </script>
+</body>
+</html>

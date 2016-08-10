@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <title>Documentation - Materialize</title>
+
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+	<link href="css/pages.css" rel="stylesheet" type="text/css" />
+    <link href="css/prism.css" rel="stylesheet">
+	<link href="css/newipadelearning.css" rel="stylesheet">
+    <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  
+  </head>
+  <body class="blue-grey lighten-1">
+
+  <div class="wrapper white ">
+    <div class="launch_wrapper launch">
+	<div class="launch_box">
+	<a class="launch_button" href="#">Launch </a>
+    </div>
+  </div>
+<div class="container">
+
+ <nav class="white">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><img src="images/logo.png" /></a>
+   <div class="row">
+   <div class="col s6 right">
+      <div class="col s2 relative bottom right black darken-1 center">
+   <i class="material-icons white-text ">close</i>
+   </div>
+     <div class="col s2 relative bottom right black darken-1 center">
+   <i class="material-icons white-text">home</i>
+   </div>
+   <div class="col s2 relative right red darken-1 center moveup">
+  <h5 class="center counter" >2/24</h5>
+   </div>
+ 
+   </div>
+   </div>
+    </div>
+  </nav>
+        
+</div>
+<div class="container">
+<div class="row">
+<div class="col s2 newassign">
+<a href="#"><div class="col s12 grey darken-4 center paddingmanager">
+<i class="material-icons white-text center fonter" id="viewlist">view_list</i>
+</div></a>
+<a href="#"><div class="col s12 grey darken-4 center paddingmanager">
+<i class="material-icons white-text center fonter">library_books</i>
+</div></a>
+<a href="#"><div class="col s12 grey darken-4 center paddingmanager">
+<i class="material-icons white-text center fonter">description</i>
+</div></a>
+<a href="#"><div class="col s12 grey darken-4 center paddingmanager">
+<i class="material-icons white-text center fonter">live_help</i>
+</div></a>
+<a href="#"><div class="col s12 grey darken-4 center paddingmanager">
+<i class="material-icons white-text center fonter" id="prev">skip_previous</i>
+<i class="material-icons white-text center fonter" id="next">skip_next</i>
+
+</div></a>
+<a href="#"><div class="col s12 grey darken-4 center paddingmanager">
+<i class="material-icons white-text center fonter">play_circle_outline</i>
+</div></a>
+<a href="#"><div class="col s12 grey darken-4 center paddingmanager">
+<i class="material-icons white-text center fonter">replay</i>
+</div></a>
+<a href="#"><div class="col s12 grey darken-4 center paddingmanager">
+<i class="material-icons white-text center fonter">volume_off</i>
+</div></a>
+</div>
+<div class="col s10">
+<div class="container">
+ <div class="nis_frame_emod">
+ 
+ </div>
+</div>        
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="close"><i class="material-icons white-text closer">close</i></div>
+<div id="resp" class="col s2  popupbox red darken-2 center">
+
+</div>
+</div>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+
+	<script src="js/transcript.js"></script>
+	<script src="js/newelearning.js">
+	</script>
+	<script src="js/nistantrivoice.js"></script>
+
+    <script src="js/jquery.timeago.min.js"></script>  
+    <script src="js/prism.js"></script>
+    <script src="bin/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+   
+<script>
+
+
+$(document).ready(function (){
+   $('div,pre').mouseup(function (e){
+   // responsiveVoice.cancel();
+    responsiveVoice.speak(getSelectionText(),"UK English Male");
+   })
+
+});
+
+</script>
+
+    
+  </body>
+</html>

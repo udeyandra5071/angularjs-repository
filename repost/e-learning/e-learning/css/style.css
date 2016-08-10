@@ -1,0 +1,28 @@
+html,body{margin:0px; padding:0px; overflow:hidden; font-family:arial;}
+.nis_wrapper_emod{float:none;position:fixed;width:100%; height:auto;display:none;}
+.nis_header_emod{float:left;width:100%;height:56px; background:#ab218e; position:fixed; z-index:1;}
+.nis_footer_emod{float:left;width:100%;padding:5px; height:42px;   background: #551047; position:fixed; z-index:1; bottom:0px; display:block !important;}
+.nis_frame_emod{float:none;position:absolute;width:100%; height:550px;top: 61px;}
+.nis_home_box{float:left;position:relative;}
+.nis_home_box a{outline:none; text-decoration:none; border:none;}
+.nis_home_box a img{outline:none; text-decoration:none; border:none;}
+.nis_emod_title{color:#f78522;width: 500px;text-align: center;float: none;position: relative;margin: 0px auto;}
+.logout{float: right;right: 0px;position: absolute;top: 0px;}
+.launch{float:none;position:fixed;width:100%; height:auto; display:none; margin:0px auto;}
+.launch_box{float:none;position:relative;width:100%; height:auto;}
+.launch_box img{width:100%;}
+.launch_button{position:absolute;width:135px;height:30px;z-index:1;top:50%;left:60%;margin:-100px 0 0 -150px;text-align:center;padding-top:8px;background:#285771; border-radius:5px;color:#fff; font-weight:bold; text-decoration:none;outline:none;}
+#sound{width:4%; float:left;position:relative; margin-left:0px;}
+#sound img{ width: 91%;float: left;position: relative;margin-left: 0px;}
+#play{width:4%; float:left;position:relative; margin-left:0px;}
+#play img{ width: 85%;float: left;position: relative;margin-left: 0px;}
+#pause{width:4%; float:left;position:relative; margin-left:0px;}
+#pause img{ width: 85%;float: left;position: relative;margin-left: 0px;}
+#stop{width:4%; float:left;position:relative; margin-left:0px;}
+#stop img{ width: 85%;float: left;position: relative;margin-left: 0px;}
+#prev{width:4%; float:left;position:relative; margin-left:0px;}
+#prev img{ width: 85%;float: left;position: relative;margin-left: 0px;}
+#next{width:4%; float:left;position:relative; margin-left:0px;}
+#next img{ width: 85%;float: left;position: relative;margin-left: 0px;}
+.progress_timeline{  float: left;position: relative;width: 65%;height: 5px;background: #f78522;top: 47%;left: 1%;}
+.progress_overlay{  float: left;position: absolute;width: 2px;height: 5px;background: #fff;top: 48%;left: 25.1%;z-index: 2;}

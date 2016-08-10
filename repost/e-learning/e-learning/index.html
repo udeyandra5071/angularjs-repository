@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>Untitled Document</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/pages.css" rel="stylesheet" type="text/css" />
+	<link href="css/video.css" rel="stylesheet" type="text/css" /><script src="js/jquery.min.js">
+</script><script src="js/nistantri-emod-plugger.js">
+
+</script><script src="js/jquery-ui.js"></script>
+<script src="js/nistantrivoice.js"></script>
+	<link href="css/jquery-ui.css" rel="stylesheet" />
+	
+</head>
+<body>
+<div class="nis_wrapper_emod">
+<div class="nis_header_emod"><a class="nis_home_box" href="index.html"><img src="images/nis-e-home-icon.jpg" width="50" /> </a>
+<div class="nis_emod_title">
+<h2>E - Learning Modules</h2>
+</div>
+<a class="logout" href="#"> <img src="images/nis-e-logout-icon.png" width="56" /> </a></div>
+
+<div class="nis_frame_emod"></div>
+
+<div class="nis_footer_emod"><a href="#" class="clikced">click</a><a href="#" id="sound"><img src="images/sound-icon.png" /></a> <a href="#" id="prev"><img src="images/prev-icon.png" /></a> <a href="#" id="play" title="Click on play button to view all slides automatically"><img src="images/play-icon.png" /></a> <a href="#" id="pause"><img src="images/pause-icon.png" /></a> <a href="#" id="stop"><img src="images/stop.png" /></a> <a href="#" id="next"><img src="images/next-icon.png" /></a>
+
+<div class="progress_timeline"></div>
+
+<div class="progress_overlay"></div>
+</div>
+</div>
+
+<div class="launch">
+<div class="launch_box"><img src="images/launch.jpg" width="100%" /></div>
+<a class="launch_button" href="#">Launch </a></div>
+<script>
+$('a').mouseenter(function() {
+  responsiveVoice.cancel();
+  responsiveVoice.speak($(this).text(),"UK English Male");
+});
+
+function getSelectionText() {
+
+    var text = "";
+
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+        text = document.selection.createRange().text;
+    }
+    return text;
+}
+$(document).ready(function (){
+
+   $('div,pre').mouseup(function (e){
+    responsiveVoice.cancel();
+    responsiveVoice.speak(getSelectionText(),"UK English Male");
+   });
+   
+});
+$(document).on('mouseleave', exitIntent);
+function exitIntent(e){
+   if( e.clientY < 0 ) {
+     responsiveVoice.cancel();
+     responsiveVoice.speak('');
+   }
+}
+$('a').keyup(function(e) {
+    console.log('keyup called');
+    var code = e.keyCode || e.which;
+    if (code == '9') {
+    responsiveVoice.cancel();
+     responsiveVoice.speak('Link to '+$(':focus').text());
+    }
+ });
+$('button').keyup(function(e) {
+    console.log('keyup called');
+    var code = e.keyCode || e.which;
+    if (code == '9') {
+     setTimeout(responsiveVoice.speak($(':focus').text()+' button'),1000);
+    }
+ });
+$('textarea').keyup(function(e) {
+    console.log('keyup called');
+    var code = e.keyCode || e.which;
+    if (code == '9') {
+    responsiveVoice.cancel();
+     responsiveVoice.speak('Text Input '+$(':focus').attr('placeholder'));
+    }
+ });
+
+var started=0;
+$('body').keyup(function(e) {
+    console.log('keyup called');
+    var code = e.keyCode || e.which;
+    if (code == '40' && e.ctrlKey) {
+    console.log('ctrl + down arrow');
+    responsiveVoice.cancel();
+      responsiveVoice.speak($('p').eq(started).text());
+      $('p').eq(started).get(0).scrollIntoView(false);
+      console.log($('p').eq(started));
+      started=started+1;
+    }
+    if (code == '38' && e.ctrlKey) {
+    console.log('ctrl + up arrow');
+    responsiveVoice.cancel();
+     responsiveVoice.speak($('p').eq(started).text());
+      $('p').eq(started).get(0).scrollIntoView(false);
+      console.log($('p').eq(started));
+     started=started-1;
+    }
+ });
+
+</script>
+
+</body>
+</html>

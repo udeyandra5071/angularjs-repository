@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="ckeditor.js"></script>
+	<script src="js/myeditor.js"></script>
+	<link rel="stylesheet" href="css/ckeditor.css">
+	<link rel="stylesheet" href="toolbarconfigurator/lib/codemirror/neo.css">
+     <style type="text/css">
+         .designerview{display: none;}
+    </style>
+    </head>
+
+    <body>
+     <div class="row">
+         <button class="codeview btn grey">Switch Code View</button>
+         <button class="designview btn">Switch Design View</button>
+        <div class="col s12 m12 l12 designerview">
+         Designer view
+         </div>
+        <div class="col s12 m12 l12" id="editor">
+         	
+			
+	
+         </div>
+      
+        </div>
+           <script>
+	initSample();
+
+</script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+        $(document).ready(function(){
+           $(".designview").on("click",function(){
+               $(".designerview").show();
+               $(this).toggleClass("grey");
+               $(".codeview").toggleClass("grey");
+           });
+               $("#editor").append("<p>My Theme</p>");
+          
+        });
+        </script>
+    </body>
+  </html>

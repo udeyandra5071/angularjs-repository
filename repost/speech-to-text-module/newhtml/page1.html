@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Page 1</title>
+<script>
+
+$(document).ready(function() {
+  $(".page1_box").fadeIn();
+  $(".page1_content").fadeIn(); 
+  
+
+});
+
+</script>
+
+</head>
+
+<body>
+<div class="page">
+<div class="page_content" >
+<h2 class="title grey-text darken-4"><p class="hidden_text">Hello user how are you. lets discuss about your topic.</p><p>Influenza.</p></h2>
+<p class="paragraph grey-text darken-4 para1">Definition: Influenza, commonly known as "the flu", is an infectious disease caused by the influenza virus. Symptoms can be mild to severe. The most common symptoms include: a high fever, runny nose, sore throat, muscle pains, headache, coughing, and feeling tired.These symptoms typically begin two days after exposure to the virus and most last less than a week. The cough, however, may last for more than two weeks.In children there may be nausea and vomiting but these are not common in adults. Nausea and vomiting occur more commonly in the unrelated infection gastroenteritis, which is sometimes inaccurately referred to as "stomach flu" or "24-hour flu".Complications of influenza may include viral pneumonia, secondary bacterial pneumonia, sinus infections, and worsening of previous health problems such as asthma or heart failure. </p>
+
+<ul>
+<p class="bulletnarrator_text">Three types of influenza affect people are:</p>
+<li class="bullet_padding" id="bullet1"><p>Influenza A.</p></li>
+<li class="bullet_padding" id="bullet2"><p>Influenza B.</p></li>
+<li class="bullet_padding" id="bullet3"><p class="hidden_text">and</p>Influenza C.</li>
+<li class="bullet_padding" id="bullet4">Enter your Text.</li>
+<li class="bullet_padding" id="bullet5">Enter your Text.</li>
+<li class="bullet_padding" id="bullet6">Enter your Text.</li>
+<li class="bullet_padding" id="bullet7">Enter your Text.</li>
+
+</ul>
+</div>
+
+</div>
+<script>
+$(function(){
+			$(".title").fadeIn(function(){
+				responsiveVoice.speak($(".title").text(),"UK English Male");
+				
+			});
+			/*$(".paragraph").delay(8000).fadeIn(function(){
+				responsiveVoice.speak($(".paragraph").text(),"UK English Male");
+				
+			});
+		*/
+			setTimeout(function(){$('.para1').fadeIn(function(){
+			responsiveVoice.speak($(this).text(),"UK English Male");	
+			});}, 5000);
+				setTimeout(function(){$('.bulletnarrator_text').fadeIn(function(){
+				responsiveVoice.speak($(".bulletnarrator_text").text(),"UK English Male");
+			});}, 61000);
+			setTimeout(function(){$('#bullet1').fadeIn(function(){
+				responsiveVoice.speak($(".bulletnarrator_text").text(),"UK English Male");
+			responsiveVoice.speak($(this).text(),"UK English Male");			
+			});}, 64000);
+			setTimeout(function(){$('#bullet2').fadeIn(function(){
+			responsiveVoice.speak($(this).text(),"UK English Male");	
+			});}, 67000);
+			setTimeout(function(){$('#bullet3').fadeIn(function(){
+			responsiveVoice.speak($(this).text(),"UK English Male");	
+			});}, 70000);
+		});
+		</script>
+</body>
+</html>

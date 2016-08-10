@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Page 1</title>
+<script>
+
+$(document).ready(function() {
+  $(".page1_box").fadeIn();
+  $(".page1_content").fadeIn(); 
+  
+
+});
+
+</script>
+
+</head>
+
+<body>
+<div class="page">
+<div class="page_content" >
+<h2 class="title grey-text darken-4"><div class="hidden_text"><p>Let's discuss about types of Influenza.</p></div></h2>
+<h2 class="grey-text darken-4">Types of Influenza.</h2>
+<p class="paragraph grey-text darken-4 para2" >Influenza A and B, viruses can be further characterized into strains. There is a plethora of different strains of influenza B viruses and of influenza A subtypes, and new strains of influenza viruses can appear and replace older strains. Such newly emerging viruses contain antigenic variations known as antigenic drift and shift. The clinical outcome of the disease depends on both the influenza virus and ensuing host defense. </p>
+<p class="text2">Descriptions for types of influenza:</p>
+<ul>
+
+<li class="bullet_padding" id="bullet1_page2"><p>Influenza type A viruses are known to infect people, birds, pigs, horses, whales, seals and other animals, but wild birds represent the natural hosts for these viruses.</p></li>
+<li class="bullet_padding" id="bullet2_page2"><p>Influenza B viruses are responsible the same spectrum of disease as influenza A; however, influenza B viruses do not cause pandemics.</p></li>
+<li class="bullet_padding" id="bullet3_page2"><p class="hidden_text">and</p>Influenza C viruses are different in comparison to influenza A and B. The enveloped virions have hexagonal structures on the surface. It forms stretched cordlike structures (approximately 500 microns in length) as they bud from cell. </li>
+<li class="bullet_padding" id="bullet4_page2">Enter your Text.</li>
+<li class="bullet_padding" id="bullet5_page2">Enter your Text.</li>
+<li class="bullet_padding" id="bullet6_page2">Enter your Text.</li>
+<li class="bullet_padding" id="bullet7_page2">Enter your Text.</li>
+
+</ul>
+</div>
+
+</div>
+<script>
+$(function(){
+			$(".title").fadeIn(function(){
+				responsiveVoice.speak($(".title").text(),"UK English Male");
+				
+			});
+			/*$(".paragraph").delay(8000).fadeIn(function(){
+				responsiveVoice.speak($(".paragraph").text(),"UK English Male");
+				
+			});
+		*/
+			setTimeout(function(){$('.para2').fadeIn(function(){
+			responsiveVoice.speak($(this).text(),"UK English Male");	
+			});}, 5000);
+				setTimeout(function(){$('.text2').fadeIn(function(){
+				responsiveVoice.speak($(".text2").text(),"UK English Male");
+			});}, 40000);
+			setTimeout(function(){$('#bullet1_page2').fadeIn(function(){
+				
+			responsiveVoice.speak($(this).text(),"UK English Male");			
+			});}, 60000);
+			setTimeout(function(){$('#bullet2_page2').fadeIn(function(){
+			responsiveVoice.speak($(this).text(),"UK English Male");	
+			});}, 74000);
+			setTimeout(function(){$('#bullet3_page2').fadeIn(function(){
+			responsiveVoice.speak($(this).text(),"UK English Male");	
+			});},84000);
+		});
+		</script>
+</body>
+</html>

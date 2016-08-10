@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Page 1</title>
+<script>
+$('p').load(function() {
+  responsiveVoice.cancel();
+  responsiveVoice.speak($(this).text(),"UK English Male");
+});
+$(document).ready(function() {
+  $(".page1_box").fadeIn();
+  $(".page1_content").fadeIn(); 
+  
+
+});
+
+</script>
+
+</head>
+
+<body>
+<div class="page1">
+<div class="page1_box">
+<img src="images/page1/page_1.jpg" />
+</div>
+<a>
+<div class="page1_content" >
+<h2><p>Cleaner, healthier eating</p></h2>
+<p>Healthy eating isn't always easy, especially with junk foods
+tempting you at the grocery store, corner deli, and even the 
+office kitchen. Though eating clean at every meal isn't always 
+realistic, you can take steps to limit processed food.</p>
+<p>Here, we show how common foods morph from real (i.e. apples)
+ to highly processed (apple toaster pastries). </p>
+</div>
+</a>
+</div>
+</body>
+</html>

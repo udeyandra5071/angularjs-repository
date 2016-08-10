@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Page 1</title>
+<script>
+
+$(document).ready(function() {
+  $(".page1_box").fadeIn();
+  $(".page1_content").fadeIn(); 
+  
+
+});
+
+</script>
+
+</head>
+
+<body>
+<div class="page">
+<div class="page_content" >
+<h2 class="title grey-text darken-4"><div class="hidden_text"><p>Next point.</p></div><p> Affect of influenza.</p></h2>
+<p class="paragraph darken-4 para3">Usually, the virus is spread through the air from coughs or sneezes. This is believed to occur mostly over relatively short distances. It can also be spread by touching surfaces contaminated by the virus and then touching the mouth or eyes. A person may be infectious to others both before and during the time they are sick. The infection may be confirmed by testing the throat, sputum, or nose for the virus. 
+</p>
+<p class="text3">Effect of influenza:</p>
+<ul>
+
+<li class="bullet_padding" id="bullet1_page3"><p>Influenza type A viruses are known to infect people, birds, pigs, horses, whales, seals and other animals, but wild birds represent the natural hosts for these viruses.</p></li>
+<li class="bullet_padding" id="bullet2_page3"><p>Influenza B viruses are responsible the same spectrum of disease as influenza A; however, influenza B viruses do not cause pandemics.</p></li>
+<li class="bullet_padding" id="bullet3_page3"><p class="hidden_text">and</p>Influenza C viruses are different in comparison to influenza A and B. The enveloped virions have hexagonal structures on the surface. It forms stretched cordlike structures (approximately 500 microns in length) as they bud from cell. </li>
+<li class="bullet_padding" id="bullet4_page3">Enter your Text.</li>
+<li class="bullet_padding" id="bullet5_page3">Enter your Text.</li>
+<li class="bullet_padding" id="bullet6_page3">Enter your Text.</li>
+<li class="bullet_padding" id="bullet7_page3">Enter your Text.</li>
+
+</ul>
+<div class="video_shower">
+<p class="videonarrator3">Lets see on video demonstration get some idea on influenza.</p>
+<iframe src="https://player.vimeo.com/video/16536347" width="865" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div> 
+</div>
+</div>
+<script>
+$(function(){
+			$(".title").fadeIn(function(){
+				responsiveVoice.speak($(".title").text(),"UK English Male");
+				
+			});
+			/*$(".paragraph").delay(8000).fadeIn(function(){
+				responsiveVoice.speak($(".paragraph").text(),"UK English Male");
+				
+			});
+		*/
+			setTimeout(function(){$('.para3').fadeIn(function(){
+			responsiveVoice.speak($(this).text(),"UK English Male");	
+			});}, 5000);
+				setTimeout(function(){$('.text3').fadeIn(function(){
+				responsiveVoice.speak($(".text3").text(),"UK English Male");
+			});}, 40000);
+			setTimeout(function(){$('#bullet1_page3').fadeIn(function(){
+				
+			responsiveVoice.speak($(this).text(),"UK English Male");			
+			});}, 60000);
+			setTimeout(function(){$('#bullet2_page3').fadeIn(function(){
+			responsiveVoice.speak($(this).text(),"UK English Male");	
+			});}, 74000);
+			setTimeout(function(){$('#bullet3_page3').fadeIn(function(){
+			responsiveVoice.speak($(this).text(),"UK English Male");	
+			});},84000);
+			setTimeout(function(){$('.videonarrator3').fadeIn(function(){
+			responsiveVoice.speak($(this).text(),"UK English Male");	
+			});},89000);
+			setTimeout(function(){$('.video_shower').fadeIn(function(){
+			//responsiveVoice.speak($(this).text(),"UK English Male");
+$(".paragraph").hide();$(".bullet_padding").hide();	$(".text3").hide();		
+			});},96000);
+		});
+		</script>
+</body>
+</html>

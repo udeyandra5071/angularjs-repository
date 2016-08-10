@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+.player{float:left;position:relative; width:50%; height:auto;margin-left:0px;}
+.mediaplayer{float:left; position:relative; width:100%; height:auto; margin-left:0px;}
+video{float: right;position: relative;width: 92%;height: auto;margin-left: 0px;
+right: 0px;margin-top: 12%;}
+.current-time{ float:left; position:absolute; z-index:2; width:100px;}
+.duration{ float:left; position:absolute; z-index:2; width:100px;}
+.progress{float:left; position:absolute; z-index:2; width:100px;}
+.paused-state{float:left; position:absolute; z-index:2; width:100px;}
+.muted-state{float:left; position:absolute; z-index:2; width:100px;}
+.volume{float:left; position:absolute; z-index:2; width:100px;}
+.videoWidth{float:left; position:absolute; z-index:2; width:100px;}
+.networkState{float:left; position:absolute; z-index:2; width:100px;}
+.readyState{float:left; position:absolute; z-index:2; width:100px;}
+.loadMediaSrc{float:left; position:absolute; z-index:2; width:100px;}
+.currentTime{position: fixed;
+z-index: 15;
+width: 610px;
+bottom: 10%;
+right: 0px;
+background: #ab218e;
+border-bottom: 1px solid #FF5;}
+.time-slider{width:600px;}
+
+input[type="checkbox"] {
+  margin:0;
+  padding:0;
+  width:15px;
+}
+label {
+  position: relative;
+  color: #373;
+}
+label::before {
+  position: absolute;
+  left: -21px;
+  top: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  padding: 2px 2px 4px 4px;
+  background: #e5e5e5;
+  background: -webkit-linear-gradient(top, #c5c5c5, #e5e5e5);
+  background: -moz-linear-gradient(top, #c5c5c5, #e5e5e5);
+  content: " ";
+  margin-top: -1px;
+  cursor: pointer;
+  border: 1px solid #999999;
+  text-align: center;
+  line-height: 10px;
+  vertical-align: top;
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px #fff;
+  color: #555;
+  text-shadow: 0 -1px #fff, 0 1px #000;
+}
+label:hover::before {
+  box-shadow: inset 0 0 2px 1px #fd2;
+}
+label.checked::before {
+  content: "\2713";
+}
+label.disabled::before {
+  border-color: #bbb;
+  color: #bbb;
+  text-shadow: 0 -1px #ccc, 0 1px #666;
+  background: -moz-linear-gradient(top, #d5d5d5, #e5e5e5);
+}
+.page1_content {
+margin-top: 4.5%;
+left: 2%;
+}

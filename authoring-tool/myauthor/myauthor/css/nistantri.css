@@ -1,0 +1,16 @@
+.padding-left-right-0{    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+}
+html,body{background: #37475c;}
+.border-right{ border-right: 1px solid #c3c3c3;}
+.position-fixed{position: fixed; height: 100%;-webkit-box-shadow: 1px 0px 4px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    1px 0px 4px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         1px 0px 4px 0px rgba(50, 50, 50, 0.75);
+background: #697484;}
+.navbg{background: #223956;}
+.login{    margin: 60px auto;
+    position: relative;
+    float: none !important;}
+.register{    height: 520px;
+    position: relative;
+    float: none !important;}

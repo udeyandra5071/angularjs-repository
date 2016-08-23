@@ -1,0 +1,13 @@
+{
+    "jscodehints.detectedExclusions": [
+        "D:/Xamp/htdocs/xml_data_generatorByudey/Udey/opop/js/slickQuiz.js",
+        "D:/Xamp/htdocs/xml_data_generatorByudey/Udey/opop/js/swiper.min.js",
+        "D:/Xamp/htdocs/xml_data_generatorByudey/Udey/opop/js/tabplayer.js",
+        "D:/Xamp/htdocs/xml_data_generatorByudey/Udey/opop/js/transcript.js",
+        "D:/Xamp/htdocs/xml_data_generatorByudey/Udey/opop/js/waves.js",
+        "D:/Xamp/htdocs/xml_data_generatorByudey/Udey/opop/SCORM_API_wrapper.js",
+        "D:/Xamp/htdocs/xml_data_generatorByudey/Udey/opop/js/slickQuiz-config1.js",
+        "D:/Xamp/htdocs/xml_data_generatorByudey/Udey/opop/js/slickQuiz-config.js",
+        "D:/Xamp/htdocs/xml_data_generatorByudey/Udey/opop/js/scorm-width-resizer.js"
+    ]
+}

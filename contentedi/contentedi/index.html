@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+    Main Page
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.css" >
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.css" >
+<link rel="stylesheet" type="text/css" href="css/document.css" />
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".draggable").draggable({ cursor: "crosshair", revert: "invalid"});
+$("#drop").droppable({ accept: ".draggable", 
+           drop: function(event, ui) {
+                    console.log("drop");
+                   $(this).removeClass("border").removeClass("over");
+             var dropped = ui.draggable;
+            var droppedOn = $(this);
+                ui.draggable.remove();
+                
+           
+            
+           $(dropped).detach().css({top: 0,left: 0}).appendTo(droppedOn);      
+             
+                }, 
+          over: function(event, elem) {
+                  $(this).addClass("over");
+                   console.log("over");
+          }
+                ,
+                  out: function(event, elem) {
+                    $(this).removeClass("over");
+                       
+                  }
+                     });
+$("#drop").sortable();
+
+        
+    });    
+    $('.dropdown-toggle').dropdown();
+        $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+    </script>
+    <style>
+        .active{background: #ffb907 !important; color: #000 !important;}
+         .active a{background: #ffb907 !important; color: #000 !important;}
+        a:focus{background: #ffb907 !important; color: #000 !important;}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-12">
+    <!-- Brand and toggle get grouped for better mobile display -->
+              <a class="navbar-brand" href="#">Noname</a>
+    <div class="navbar-header navbar-right">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home </a></li>
+        <li><a href="#">Create Page</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+               <li><a href="#">Username</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Register user</a></li>
+            <li><a href="#">View Profile</a></li>
+            <li><a href="#">Logout</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    
+   
+
+    </div><!-- /.navbar-collapse -->
+    </div><!-- col -->
+ </div> <!-- row-->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid margin-top">
+ <div class="row">
+  <div class="col-md-3">
+     <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Toolkit</h3>
+      </div>
+      <div class="panel-body">
+        <div class="btn-group-vertical" role="group" aria-label="...">
+ <button type="button" class="btn btn-default" ><span class="glyphicon glyphicon-tasks"></span> Add Slide</button>
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><span class="glyphicon glyphicon-time" ></span> Add Time</button>
+<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-menu-hamburger"></span> Sub Blocks</button>
+</div>
+      </div>
+    </div>
+      <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Add sub blocks</h3>
+      </div>
+      <div class="panel-body">
+      <span class="glyphicon glyphicon-tasks"></span>
+      </div>
+    </div>
+     </div>
+     <div class="col-md-8">
+          <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Create Page</h3>
+      </div>
+      <div class="panel-body">
+      <div class="content" contenteditable="true" id="drop">
+         
+         </div>
+          
+      </div>
+    </div>
+     
+     </div>
+  </div>
+</div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Add Time</h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
